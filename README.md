@@ -1,16 +1,16 @@
 # Organização de Computadores II [2018/1]
 
 * Breno
-* Fernanda Aparecida Rodrigues Silva | fernandaars@dcc.ufmg.br, fernandaaprsilva@gmail.com
 * Evandro Lucas
+* Fernanda Aparecida Rodrigues Silva | fernandaars@dcc.ufmg.br, fernandaaprsilva@gmail.com
 * Rafael Pereza
 
 ## Trabalhos
 
-* Trabalho Prático 1 | Data de Entrega:00/00 | [Especificação]()
-* Trabalho Prático 2 | Data de Entrega:00/00 | [Especificação]()
+* Trabalho Prático 1 | Data de Entrega:00/00 | [Especificação](https://findtheinvisiblecow.com/)
+* Trabalho Prático 2 | Data de Entrega:00/00 | [Especificação](https://findtheinvisiblecow.com/)
 * ...
-* Trabalho Prático N | Data de Entrega:00/00 | [Especificação]()
+* Trabalho Prático N | Data de Entrega:00/00 | [Especificação](https://findtheinvisiblecow.com/)
 
 ### Links das Documentações
 
@@ -23,12 +23,12 @@
 
 ```
 * Colocar o nome de pastas, projeto e arquivo high-lvl igual ao nome do módulo;
-* (warning 18236) colocar comando: set_global_assignment -name NUM_PARALLEL_PROCESSORS 2 nos arquivos [nome].qsf e assignment_defaults.qdf (criar arquivo se ele não existir);
+* (warning 18236) colocar comando: set_global_assignment -name NUM_PARALLEL_PROCESSORS 2 nos arquivos [nome].qsf e /assignment_defaults.qdf (criar arquivo se ele não existir);
 * (warning 332012) criar arquivo [nome].sdc;
 * (warning 332148) colocar comando: derive_clocks -period 10 -waveform {0 5} no arquivo [nome].sdc;
-* (warning 169085) Assignment -> Back-Annotate Assignments marque a opção "Pin&device Assignment" e ok (como já estava marcado, desmarquei e marquei novamente e o warning sumiu);
-* (warning 15714) conferir em fitter -> resource section -> I/O Assignment Warning o problema dos pinos, caso for missing drive ;strength and slew rate faça: abrir pin planner, na lista de pinos setar current strength para max_current e slew rate para (fastest) em todos os pinos que apresentarem o problema;
-* Fazer a simulação a primeira vez com copiar o log da simulação e colocar na pasta simulation/modelsim a partir da pasta raiz do projeto, salvar como .do
+* (warning 169085) Assignment -> Back-Annotate Assignments marque a opção "Pin&device Assignment" e ok (como já estava marcado, /desmarquei e marquei novamente e o warning sumiu);
+* (warning 15714) conferir em fitter -> resource section -> I/O Assignment Warning o problema dos pinos, caso for missing drive /strength and slew rate faça: abrir pin planner, na lista de pinos setar current strength para max_current e slew rate para (fastest) / em todos os pinos que apresentarem o problema;
+* Fazer a simulação a primeira vez com copiar o log da simulação e colocar na pasta simulation/modelsim a partir da pasta raiz do /projeto, salvar como .do
 ```
 
 ## Provas
