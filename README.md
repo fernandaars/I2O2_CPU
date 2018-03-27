@@ -3,7 +3,7 @@
 * Breno
 * Evandro Lucas
 * Fernanda Aparecida Rodrigues Silva | fernandaars@dcc.ufmg.br, fernandaaprsilva@gmail.com
-* Rafael Pereza
+* Rafael Perez | rafael.perez@dcc.ufmg.br, rafaelperez1279@gmail.com
 
 ## Trabalhos
 
