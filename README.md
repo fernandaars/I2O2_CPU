@@ -1,23 +1,21 @@
 # Organização de Computadores II [2018/1]
 
-* Breno
-* Evandro Lucas
+* Breno Augusto Martins | brenoam@dcc.ufmg.br, brenoaugmartins@gmail.com
+* Evandro Lucas Figueiredo Teixeira | lucasfigteixeira@dcc.ufmg.br lucasfigteixeira@gmail.com
 * Fernanda Aparecida Rodrigues Silva | fernandaars@dcc.ufmg.br, fernandaaprsilva@gmail.com
 * Rafael Perez | rafael.perez@dcc.ufmg.br, rafaelperez1279@gmail.com
 
 ## Trabalhos
 
-* Trabalho Prático 1 | Data de Entrega:00/00 | [Especificação](https://findtheinvisiblecow.com/)
-* Trabalho Prático 2 | Data de Entrega:00/00 | [Especificação](https://findtheinvisiblecow.com/)
-* ...
-* Trabalho Prático N | Data de Entrega:00/00 | [Especificação](https://findtheinvisiblecow.com/)
+* Trabalho Prático 1 | Data de Entrega:10/05 | [Especificação](https://github.com/fernandaars/UFMG-5-OC2/blob/master/TP1/tp1_spec.pdf)
+* Trabalho Prático 2 | Data de Entrega:12/06 | [Especificação](https://github.com/fernandaars/UFMG-5-OC2/blob/master/TP1/tp1_spec.pdf)
+* Trabalho Prático 3 | Data de Entrega:05/07 | [Especificação](https://github.com/fernandaars/UFMG-5-OC2/blob/master/TP1/tp1_spec.pdf)
 
 ### Links das Documentações
 
 * [Trabalho Prático 1](https://www.overleaf.com/15100030tndqfqyxsyzy)
 * [Trabalho Prático 2](https://www.overleaf.com/15100030tndqfqyxsyzy)
-* ...
-* [Trabalho Prático N](https://www.overleaf.com/15100030tndqfqyxsyzy)
+* [Trabalho Prático 3](https://www.overleaf.com/15100030tndqfqyxsyzy)
 
 ### Dicas Sobre Quartus
 
