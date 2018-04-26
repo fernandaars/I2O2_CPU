@@ -1,9 +1,9 @@
 # Organização de Computadores II [2018/1]
 
-* Breno Augusto Martins | brenoam@dcc.ufmg.br, brenoaugmartins@gmail.com
-* Evandro Lucas Figueiredo Teixeira | lucasfigteixeira@dcc.ufmg.br lucasfigteixeira@gmail.com
-* Fernanda Aparecida Rodrigues Silva | fernandaars@dcc.ufmg.br, fernandaaprsilva@gmail.com
-* Rafael Perez | rafael.perez@dcc.ufmg.br, rafaelperez1279@gmail.com
+* Breno Augusto Martins | @brenoam |  brenoam@dcc.ufmg.br, brenoaugmartins@gmail.com
+* Evandro Lucas Figueiredo Teixeira | @EvandroLucas | lucasfigteixeira@dcc.ufmg.br lucasfigteixeira@gmail.com
+* Fernanda Aparecida Rodrigues Silva | @fernandaars | fernandaars@dcc.ufmg.br, fernandaaprsilva@gmail.com
+* Rafael Augusto Botelho Perez | @r-perez | rafael.perez@dcc.ufmg.br, rafaelperez1279@gmail.com
 
 ## Trabalhos
 
@@ -50,4 +50,3 @@
 
 * Luis Eduardo Pedraza Caballero | lpedrazac1@gmail.com
 * Laysson Oliveira Luz | layssonoliveir4@gmail.com
-
