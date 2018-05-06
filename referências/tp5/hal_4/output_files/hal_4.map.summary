@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec  6 14:21:36 2017
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : hal_4
+Top-level Entity Name : hal_4
+Family : Cyclone IV E
+Total logic elements : 1,142
+    Total combinational functions : 860
+    Dedicated logic registers : 390
+Total registers : 390
+Total pins : 92
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 2
+Total PLLs : 0

@@ -1,0 +1,142 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/simulation/modelsim
+valu
+Z1 !s110 1507851564
+!i10b 1
+!s100 =[dXl30Na<mo7>HJd>g;00
+I@9:29ZkXQ[NVRiknA?9al0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1507847492
+8/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/alu.v
+F/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/alu.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1507851564.000000
+!s107 /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/TP2/tb_hal_1|/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/alu.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/TP2/tb_hal_1
+Z7 tCvgOpt 0
+vbcd_7seg
+R1
+!i10b 1
+!s100 nzNc<Ig^XY8ziHlWcZc[Y3
+IjTO58gz1JYP6E9:lza]O]3
+R2
+R0
+Z8 w1507847337
+Z9 8/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/hal_1.v
+Z10 F/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/hal_1.v
+L0 138
+R3
+r1
+!s85 0
+31
+R4
+Z11 !s107 /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/hal_1.v|
+Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/TP2/tb_hal_1|/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/hal_1.v|
+!i113 1
+R5
+R6
+R7
+vcontrol
+R1
+!i10b 1
+!s100 8B;bZacGCd<Va37g1[nR`0
+IV]eNe_J]<Ve9oB0lVEY@:2
+R2
+R0
+R8
+R9
+R10
+L0 213
+R3
+r1
+!s85 0
+31
+R4
+R11
+R12
+!i113 1
+R5
+R6
+R7
+vdebouncer
+R1
+!i10b 1
+!s100 W>7ckjXWNQ[nKV]IodLGQ1
+IT3VDol2fWDKPzo14Ca2Pz0
+R2
+R0
+R8
+R9
+R10
+L0 184
+R3
+r1
+!s85 0
+31
+R4
+R11
+R12
+!i113 1
+R5
+R6
+R7
+vregister_bank
+R1
+!i10b 1
+!s100 `=<7SZFBS[RLbQY4mKhz<2
+IYh2YOdb`D]6DHomUO`B:E2
+R2
+R0
+w1507847844
+8/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/register_bank.v
+F/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/register_bank.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/register_bank.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/TP2/tb_hal_1|/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/register_bank.v|
+!i113 1
+R5
+R6
+R7
+vtb_hal_1
+R1
+!i10b 1
+!s100 AclM?gHdbOJ0P^>`]3j6k1
+Ijzgm@29>ojih___=lj]EI0
+R2
+R0
+w1507851502
+8/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/tb_hal_1.v
+F/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/tb_hal_1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/tb_hal_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/TP2/tb_hal_1|/home/james/Documents/UFMG/oc2/TP2/tb_hal_1/tb_hal_1.v|
+!i113 1
+R5
+R6
+R7

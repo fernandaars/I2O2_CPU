@@ -1,0 +1,62 @@
+module alu(
+	input clk,
+	input [4:0] codop,
+	input [15:0] data_a, // $s3
+	input [15:0] data_b, // $s2
+	output reg [15:0] out,
+	output neg,
+	output zero,
+	output overflow
+);
+/* assume-se que o imediato e um valor positivo sempre */
+	assign neg = out[15];
+	assign zero = (out == 0) ? 1'd1, 1'd0;
+	assign overflow = ;
+	
+	+ + + S
+	+ - - S
+	- + - S
+	- - + S
+
+	always @(posedge clk) begin
+		case (codop)
+			4'd0: begin // add
+				out <= data_a + data_b;
+			end
+			4'd1: begin // sub
+				out <= data_a - data_b;
+			end
+			4'd2: begin // slti
+				out <= (data_b > {12'd0, data_a[3:0]}) ? 16'd1 : 16'd0;
+			end
+			4'd3: begin // and
+				out <= data_a & data_b;
+			end
+			4'd4: begin // or
+				out <= data_a | data_b;
+			end
+			4'd5: begin // xor
+				out <= data_a ^ data_b;
+			end
+			4'd6: begin // andi
+				out <= data_b & {12'd0, data_a[3:0]};
+			end
+			4'd7: begin // ori
+				out <= data_b | {12'd0, data_a[3:0]};
+			end
+			4'd8: begin // xori
+				out <= data_b ^ {12'd0, data_a[3:0]};
+			end
+			4'd9: begin // addi
+				out <= data_b + {12'd0, data_a[3:0]};
+			end
+			4'd10: begin // subi
+				out <= data_b - {12'd0, data_a[3:0]};
+			end
+			default:
+				out <= data_b; //saida = $s2
+			end
+		endcase
+	end
+
+endmodule

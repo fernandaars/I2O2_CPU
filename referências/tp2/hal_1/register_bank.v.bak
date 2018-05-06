@@ -1,0 +1,30 @@
+module register_bank(
+	input			clk,
+	input	[3:0] 	ra,
+	input	[3:0]	rb,
+	input	[15:0]	reg_data,
+	input	[3:0] 	write_reg,
+	input			r_w, //0 leitura, 1 escrita
+	output	[15:0]	reg_a, 
+	output	[15:0]	reg_b
+);
+
+	integer i;
+	reg [15:0] registers[15:0];
+
+	assign reg_a = registers[ra];
+	assign reg_b = registers[rb];
+    
+	initial begin //inicializar os registradores
+		for(i = 0; i < 16; i = i+1) begin
+			registers[i] <= 16'd0;
+		end
+	end
+    
+	always @(posedge clk) begin
+		if(r_w) begin 
+			registers[write_reg] <= reg_data;
+		end
+	end
+
+endmodule

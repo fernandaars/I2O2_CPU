@@ -1,0 +1,32 @@
+//simu_branch_tom.do (branchs tomados)
+//PC = 0, 1, 2, 3, 4, 1, 5, 6, 3, 3, 7
+addi $11, 1, $11 //carrega endereços
+addi $12, 5, $12
+addi $14, 7, $14
+add $0, $0, $0
+bez -, $0, $11 //fwd $0 ALU->ID
+bez -, $0, $12 //fwd $0 EX->ID
+addi $13, 3, $13
+bez -, $0, $13 //fwd $13 ALU->ID
+bez -, $0, $13 //fwd $13 EX->ID
+bez -, $0, $14 //sem fwd
+
+//simu_branch_n_tom.do (branchs não tomados)
+addi $7, 2, $7 //carrega endereços
+addi $8, 6, $8
+addi $10, 8, $10
+add $0, 1, $0
+bez -, $0, $7 //fwd $0 ALU->ID
+bez -, $0, $8 //fwd $0 EX->ID
+addi $9, 10, $9
+bez -, $0, $9 //fwd $9 ALU->ID
+bez -, $0, $9 //fwd $9 EX->ID
+bez -, $0, $10 //sem fwd
+
+//simu_fwd.do (encaminhamentos)
+//$4 = 9, $5 = 7, $6 = 16, $LO = 112, $7 = 16
+ori $4, 9, $4
+subi $5, 2, $4 //fwd $4 EX->EX
+add $6, $5, $4 // fwd $5 EX->EX, fwd $4 EX->ID
+mul -, $5, $6 //fwd $5 EX->ID, fwd $6 EX->EX
+xor $7, $6, $0 //fwd $6 EX->ID

@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[10]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[12]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[13]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[14]",
+					"strict" : false
+				},
+				{
+					"name" : "CP[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "RI[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "RI[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RI[11]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

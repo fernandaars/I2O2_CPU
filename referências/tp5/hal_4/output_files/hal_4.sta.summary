@@ -1,0 +1,89 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'debouncer:dbk3|PB_state'
+Slack : -12.298
+TNS   : -1671.045
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -3.839
+TNS   : -52.385
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'debouncer:dbk3|PB_state'
+Slack : 0.627
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -29.985
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'key3'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debouncer:dbk3|PB_state'
+Slack : -1.285
+TNS   : -452.320
+
+Type  : Slow 1200mV 0C Model Setup 'debouncer:dbk3|PB_state'
+Slack : -11.358
+TNS   : -1513.591
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.487
+TNS   : -47.249
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'debouncer:dbk3|PB_state'
+Slack : 0.571
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -29.985
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'key3'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debouncer:dbk3|PB_state'
+Slack : -1.285
+TNS   : -452.320
+
+Type  : Fast 1200mV 0C Model Setup 'debouncer:dbk3|PB_state'
+Slack : -5.624
+TNS   : -753.297
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.424
+TNS   : -17.523
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'debouncer:dbk3|PB_state'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -25.314
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'key3'
+Slack : -3.000
+TNS   : -4.202
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debouncer:dbk3|PB_state'
+Slack : -1.000
+TNS   : -352.000
+
+------------------------------------------------------------

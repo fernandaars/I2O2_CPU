@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/tb_hal_1.v
+source_file = 1, /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/register_bank.v
+source_file = 1, /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/alu.v
+source_file = 1, /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/hal_1.v
+source_file = 1, /home/james/Documents/UFMG/oc2/TP2/tb_hal_1/db/tb_hal_1.cbx.xml
+design_name = tb_hal_1
+instance = comp, \b~output , b~output, tb_hal_1, 1
+instance = comp, \a~input , a~input, tb_hal_1, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, tb_hal_1, 1

@@ -1,0 +1,41 @@
+`ifndef BCD7S_V
+`define BCD7S_V
+
+/*
+    ____  __________     __________ ____________
+   / __ )/ ____/ __ \   /__  / ___// ____/ ____/
+  / __  / /   / / / /_____/ /\__ \/ __/ / / __
+ / /_/ / /___/ /_/ /_____/ /___/ / /___/ /_/ /
+/_____/\____/_____/     /_//____/_____/\____/
+
+*/
+
+module bcd_7seg (
+    input [3:0] hex_value,
+    output reg [6:0] disp_value
+);
+
+    always @(hex_value) begin
+        case(hex_value)
+            0: disp_value <= 7'b1000000;
+            1: disp_value <= 7'b1111001;
+            2: disp_value <= 7'b0100100;
+            3: disp_value <= 7'b0110000;
+            4: disp_value <= 7'b0011001;
+            5: disp_value <= 7'b0010010;
+            6: disp_value <= 7'b0000010;
+            7: disp_value <= 7'b1111000;
+            8: disp_value <= 7'b0000000;
+            9: disp_value <= 7'b0010000;
+            10: disp_value <= 7'b0001000;
+            11: disp_value <= 7'b0000011;
+            12: disp_value <= 7'b1000110;
+            13: disp_value <= 7'b0100001;
+            14: disp_value <= 7'b0000110;
+            15: disp_value <= 7'b0001110;
+        endcase
+    end
+
+endmodule
+
+`endif

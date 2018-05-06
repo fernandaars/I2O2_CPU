@@ -1,0 +1,164 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/james/Documents/UFMG/oc2/tp4/hal_3/simulation/modelsim
+valu
+Z1 !s110 1511350422
+!i10b 1
+!s100 @<@1lS4_BJBaW:glYRziE0
+Il@;eDQ][=FVm6f>NLaE?d2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1510611907
+8/home/james/Documents/UFMG/oc2/tp4/hal_3/alu.v
+F/home/james/Documents/UFMG/oc2/tp4/hal_3/alu.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1511350422.000000
+!s107 /home/james/Documents/UFMG/oc2/tp4/hal_3/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/tp4/hal_3|/home/james/Documents/UFMG/oc2/tp4/hal_3/alu.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/tp4/hal_3
+Z7 tCvgOpt 0
+vcontrol_unit
+R1
+!i10b 1
+!s100 j>j<0G;>[a]=`mO5SZ5XG2
+IilOSoH^BFU2l^F2cAM]9a3
+R2
+R0
+w1510697689
+8/home/james/Documents/UFMG/oc2/tp4/hal_3/control_unit.v
+F/home/james/Documents/UFMG/oc2/tp4/hal_3/control_unit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/james/Documents/UFMG/oc2/tp4/hal_3/control_unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/tp4/hal_3|/home/james/Documents/UFMG/oc2/tp4/hal_3/control_unit.v|
+!i113 1
+R5
+R6
+R7
+vhal_3
+R1
+!i10b 1
+!s100 <cT>ihRGaYdIOS;Rl172l1
+IhPV1N2OhI^]cQ:4Hl;^hA0
+R2
+R0
+w1510699107
+8/home/james/Documents/UFMG/oc2/tp4/hal_3/hal_3.v
+F/home/james/Documents/UFMG/oc2/tp4/hal_3/hal_3.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1511350421.000000
+!s107 /home/james/Documents/UFMG/oc2/tp4/hal_3/hal_3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/tp4/hal_3|/home/james/Documents/UFMG/oc2/tp4/hal_3/hal_3.v|
+!i113 1
+R5
+R6
+R7
+vmult
+R1
+!i10b 1
+!s100 JoK7LYHH>OPJ]]A7IZ=ME0
+I@K]JD]nbhk64LV763O>UO3
+R2
+R0
+w1510695028
+8/home/james/Documents/UFMG/oc2/tp4/hal_3/mult.v
+F/home/james/Documents/UFMG/oc2/tp4/hal_3/mult.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/james/Documents/UFMG/oc2/tp4/hal_3/mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/tp4/hal_3|/home/james/Documents/UFMG/oc2/tp4/hal_3/mult.v|
+!i113 1
+R5
+R6
+R7
+vmux_2
+R1
+!i10b 1
+!s100 [@>;Y3k::96jgTlC63h1U0
+I6ngOMZzm3mfTk4DBJhJjT2
+R2
+R0
+Z8 w1509629453
+Z9 8/home/james/Documents/UFMG/oc2/tp4/hal_3/mux.v
+Z10 F/home/james/Documents/UFMG/oc2/tp4/hal_3/mux.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z11 !s107 /home/james/Documents/UFMG/oc2/tp4/hal_3/mux.v|
+Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/tp4/hal_3|/home/james/Documents/UFMG/oc2/tp4/hal_3/mux.v|
+!i113 1
+R5
+R6
+R7
+vmux_3
+R1
+!i10b 1
+!s100 R>eRSE?GaoF2bO:1Y9fl63
+IfCgUD]F8U3kC=j8Cj^kZ?3
+R2
+R0
+R8
+R9
+R10
+L0 10
+R3
+r1
+!s85 0
+31
+R4
+R11
+R12
+!i113 1
+R5
+R6
+R7
+vregister_bank
+R1
+!i10b 1
+!s100 `IPg`lJL`Aa>;jLQi7@Ak0
+IXW2NAZC?m<DFVK7a1XCMm0
+R2
+R0
+w1510707243
+8/home/james/Documents/UFMG/oc2/tp4/hal_3/register_bank.v
+F/home/james/Documents/UFMG/oc2/tp4/hal_3/register_bank.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/james/Documents/UFMG/oc2/tp4/hal_3/register_bank.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/james/Documents/UFMG/oc2/tp4/hal_3|/home/james/Documents/UFMG/oc2/tp4/hal_3/register_bank.v|
+!i113 1
+R5
+R6
+R7

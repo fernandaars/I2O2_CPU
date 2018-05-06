@@ -1,0 +1,196 @@
+# do hal_4_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /home/james/Programas/intelFPGA_lite/17.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4 {/home/james/Documents/UFMG/oc2/tp5/hal_4/bcd_7seg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:28:46 on Dec 05,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4" /home/james/Documents/UFMG/oc2/tp5/hal_4/bcd_7seg.v 
+# -- Compiling module bcd_7seg
+# 
+# Top level modules:
+# 	bcd_7seg
+# End time: 17:28:46 on Dec 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4 {/home/james/Documents/UFMG/oc2/tp5/hal_4/hal_4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:28:46 on Dec 05,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4" /home/james/Documents/UFMG/oc2/tp5/hal_4/hal_4.v 
+# -- Compiling module hal_4
+# 
+# Top level modules:
+# 	hal_4
+# End time: 17:28:46 on Dec 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4 {/home/james/Documents/UFMG/oc2/tp5/hal_4/mult.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:28:46 on Dec 05,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4" /home/james/Documents/UFMG/oc2/tp5/hal_4/mult.v 
+# -- Compiling module mult
+# 
+# Top level modules:
+# 	mult
+# End time: 17:28:46 on Dec 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4 {/home/james/Documents/UFMG/oc2/tp5/hal_4/control_unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:28:46 on Dec 05,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4" /home/james/Documents/UFMG/oc2/tp5/hal_4/control_unit.v 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 17:28:46 on Dec 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4 {/home/james/Documents/UFMG/oc2/tp5/hal_4/mux.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:28:46 on Dec 05,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4" /home/james/Documents/UFMG/oc2/tp5/hal_4/mux.v 
+# -- Compiling module mux_2
+# -- Compiling module mux_3
+# -- Compiling module mux_4
+# 
+# Top level modules:
+# 	mux_2
+# 	mux_3
+# 	mux_4
+# End time: 17:28:46 on Dec 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4 {/home/james/Documents/UFMG/oc2/tp5/hal_4/register_bank.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:28:46 on Dec 05,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4" /home/james/Documents/UFMG/oc2/tp5/hal_4/register_bank.v 
+# -- Compiling module register_bank
+# 
+# Top level modules:
+# 	register_bank
+# End time: 17:28:46 on Dec 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4 {/home/james/Documents/UFMG/oc2/tp5/hal_4/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:28:46 on Dec 05,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/james/Documents/UFMG/oc2/tp5/hal_4" /home/james/Documents/UFMG/oc2/tp5/hal_4/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 17:28:46 on Dec 05,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+do simu_fwd.do
+# vsim work.alu work.bcd_7seg work.control_unit work.hal_4 work.mult work.mux_2 work.mux_3 work.register_bank 
+# Start time: 17:29:00 on Dec 05,2017
+# Loading work.alu
+# Loading work.bcd_7seg
+# Loading work.control_unit
+# Loading work.hal_4
+# Loading work.register_bank
+# Loading work.mux_2
+# Loading work.mux_4
+# Loading work.mux_3
+# Loading work.mult
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                    0
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                   50
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                  150
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     9     0     0     0     0     0     0     0     0     0     0     0                  250
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     9     7     0     0     0     0     0     0     0     0     0     0                  350
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     9     7    16     0     0     0     0     0     0     0     0     0                  450
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     9     7    16     0     0     0     0     0     0     0     0     0                  550
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     9     7    16    16     0     0     0     0     0     0     0     0                  650
+do simu_n_t
+# Cannot open macro file: simu_n_t
+do simu_branch_n_tom.do
+# End time: 17:29:31 on Dec 05,2017, Elapsed time: 0:00:31
+# Errors: 1, Warnings: 0
+# vsim work.alu work.bcd_7seg work.control_unit work.hal_4 work.mult work.mux_2 work.mux_3 work.register_bank 
+# Start time: 17:29:31 on Dec 05,2017
+# Loading work.alu
+# Loading work.bcd_7seg
+# Loading work.control_unit
+# Loading work.hal_4
+# Loading work.register_bank
+# Loading work.mux_2
+# Loading work.mux_4
+# Loading work.mux_3
+# Loading work.mult
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                    0
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                   50
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                  150
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     2     0     0     0     0     0     0     0     0                  250
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     2     6     0     0     0     0     0     0     0                  350
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     2     6     0     8     0     0     0     0     0                  450
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     1     0     0     0     0     0     0     2     6     0     8     0     0     0     0     0                  550
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     1     0     0     0     0     0     0     2     6     0     8     0     0     0     0     0                  650
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     1     0     0     0     0     0     0     2     6     0     8     0     0     0     0     0                  750
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     1     0     0     0     0     0     0     2     6    10     8     0     0     0     0     0                  850
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     1     0     0     0     0     0     0     2     6    10     8     0     0     0     0     0                  950
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     1     0     0     0     0     0     0     2     6    10     8     0     0     0     0     0                 1050
+do simu_branch_tom.do
+# End time: 17:29:55 on Dec 05,2017, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 0
+# vsim work.alu work.bcd_7seg work.control_unit work.hal_4 work.mult work.mux_2 work.mux_3 work.register_bank 
+# Start time: 17:29:55 on Dec 05,2017
+# Loading work.alu
+# Loading work.bcd_7seg
+# Loading work.control_unit
+# Loading work.hal_4
+# Loading work.register_bank
+# Loading work.mux_2
+# Loading work.mux_4
+# Loading work.mux_3
+# Loading work.mult
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                    0
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                   50
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0                  150
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0                  250
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     5     0     0     0                  350
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     5     0     7     0                  450
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     5     0     7     0                  550
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     5     0     7     0                  650
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     5     0     7     0                  750
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     5     3     7     0                  850
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     5     3     7     0                  950
+# reg_0 reg_1 reg_2 reg_3 reg_4 reg_5 reg_6 reg_7 reg_8 reg_9 reg_10 reg_11 reg_12 reg_13 reg_14 reg_15 time
+#     0     0     0     0     0     0     0     0     0     0     0     1     5     3     7     0                 1050
+# End time: 17:30:44 on Dec 05,2017, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 0

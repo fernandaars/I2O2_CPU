@@ -1,0 +1,9 @@
+module mult(
+	input [15:0]data_a,
+	input [15:0]data_b,
+	output [31:0] out
+);
+
+out = data_a * data_b;
+
+endmodule

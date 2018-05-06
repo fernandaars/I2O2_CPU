@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at register_bank.v(18): always construct contains both blocking and non-blocking assignments File: /home/james/Documents/UFMG/oc2/tp5/hal_4/register_bank.v Line: 18
