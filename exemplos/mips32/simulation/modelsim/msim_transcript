@@ -1,0 +1,32 @@
+# Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do mips32_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Thiago\ Rodrigues/Desktop/mips32 {C:/Users/Thiago Rodrigues/Desktop/mips32/mips32.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 15:36:14 on Sep 15,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Thiago Rodrigues/Desktop/mips32" C:/Users/Thiago Rodrigues/Desktop/mips32/mips32.v 
+# -- Compiling module mips32
+# ** Error: C:/Users/Thiago Rodrigues/Desktop/mips32/mips32.v(76): (vlog-2730) Undefined variable: 'SW'.
+# 
+# ** Error: C:/Users/Thiago Rodrigues/Desktop/mips32/mips32.v(77): (vlog-2730) Undefined variable: 'in_DP7_0'.
+# 
+# ** Warning: C:/Users/Thiago Rodrigues/Desktop/mips32/mips32.v(82): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Error: (vlog-13069) C:/Users/Thiago Rodrigues/Desktop/mips32/mips32.v(86): near "else": syntax error, unexpected else.
+# 
+# End time: 15:36:14 on Sep 15,2016, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 1
+# ** Error: C:/altera_lite/16.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./mips32_run_msim_rtl_verilog.do line 8
+# C:/altera_lite/16.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+C:/Users/Thiago\ Rodrigues/Desktop/mips32 {C:/Users/Thiago Rodrigues/Desktop/mips32/mips32.v}"

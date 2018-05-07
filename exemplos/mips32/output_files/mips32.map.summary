@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Sep 15 15:59:00 2016
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : mips32
+Top-level Entity Name : mips32
+Family : Cyclone IV E
+Total logic elements : 360
+    Total combinational functions : 268
+    Dedicated logic registers : 166
+Total registers : 166
+Total pins : 28
+Total virtual pins : 0
+Total memory bits : 27,648
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
