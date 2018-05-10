@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tp1
-Wed May 09 23:13:18 2018
+Thu May 10 14:14:47 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,16 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "displayWriter:display|displayDecoder:display2"
+ 11. Port Connectivity Checks: "displayWriter:display|displayDecoder:display3"
+ 12. Port Connectivity Checks: "displayWriter:display"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +45,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 09 23:13:18 2018          ;
+; Analysis & Synthesis Status        ; Successful - Thu May 10 14:14:47 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; tp1                                        ;
 ; Top-level Entity Name              ; tp1                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 47                                         ;
+;     Total combinational functions  ; 47                                         ;
+;     Dedicated logic registers      ; 26                                         ;
+; Total registers                    ; 26                                         ;
+; Total pins                         ; 86                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -151,34 +160,213 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; displayDecoder.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Fernanda Rodrigues/Desktop/tp1/displayDecoder.v ;         ;
+; tp1.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Fernanda Rodrigues/Desktop/tp1/tp1.v            ;         ;
+; displayWriter.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Fernanda Rodrigues/Desktop/tp1/displayWriter.v  ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 47             ;
+;                                             ;                ;
+; Total combinational functions               ; 47             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 21             ;
+;     -- 3 input functions                    ; 1              ;
+;     -- <=2 input functions                  ; 25             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 23             ;
+;     -- arithmetic mode                      ; 24             ;
+;                                             ;                ;
+; Total registers                             ; 26             ;
+;     -- Dedicated logic registers            ; 26             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 86             ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 26             ;
+; Total fan-out                               ; 296            ;
+; Average fan-out                             ; 1.21           ;
++---------------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
+; |tp1                            ; 47 (26)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 86   ; 0            ; |tp1                                               ; work         ;
+;    |displayWriter:display|      ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display                         ; work         ;
+;       |displayDecoder:display0| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display0 ; work         ;
+;       |displayDecoder:display4| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display4 ; work         ;
+;       |displayDecoder:display6| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display6 ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; clk[26..31]                           ; Lost fanout        ;
+; Total Number of Removed Registers = 6 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 26    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayWriter:display|displayDecoder:display2" ;
++----------+-------+----------+---------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                     ;
++----------+-------+----------+---------------------------------------------+
+; hexValue ; Input ; Info     ; Stuck at GND                                ;
++----------+-------+----------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayWriter:display|displayDecoder:display3" ;
++----------+-------+----------+---------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                     ;
++----------+-------+----------+---------------------------------------------+
+; hexValue ; Input ; Info     ; Stuck at GND                                ;
++----------+-------+----------+---------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "displayWriter:display" ;
++------------+-------+----------+-------------------+
+; Port       ; Type  ; Severity ; Details           ;
++------------+-------+----------+-------------------+
+; reg0[7..4] ; Input ; Info     ; Stuck at GND      ;
+; reg1[7..4] ; Input ; Info     ; Stuck at GND      ;
+; reg2[7..4] ; Input ; Info     ; Stuck at GND      ;
++------------+-------+----------+-------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed May 09 23:13:17 2018
+    Info: Processing started: Thu May 10 14:14:45 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tp1 -c tp1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file displaydecoder.v
     Info (12023): Found entity 1: displayDecoder
 Info (12021): Found 1 design units, including 1 entities, in source file tp1.v
     Info (12023): Found entity 1: tp1
-Error (10170): Verilog HDL syntax error at registerBank.v(16) near text "if";  expecting "endmodule" File: C:/Users/Fernanda Rodrigues/Desktop/tp1/registerBank.v Line: 16
-Error (10170): Verilog HDL syntax error at registerBank.v(20) near text "end";  expecting "endmodule" File: C:/Users/Fernanda Rodrigues/Desktop/tp1/registerBank.v Line: 20
-Error (10112): Ignored design unit "registerBank" at registerBank.v(1) due to previous errors File: C:/Users/Fernanda Rodrigues/Desktop/tp1/registerBank.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file registerbank.v
-Error (10170): Verilog HDL syntax error at alu.v(21) near text "if";  expecting "endmodule" File: C:/Users/Fernanda Rodrigues/Desktop/tp1/alu.v Line: 21
-Error (10112): Ignored design unit "alu" at alu.v(1) due to previous errors File: C:/Users/Fernanda Rodrigues/Desktop/tp1/alu.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file alu.v
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: alu
 Info (12021): Found 1 design units, including 1 entities, in source file switchesreader.v
     Info (12023): Found entity 1: switchesReader
 Info (12021): Found 1 design units, including 1 entities, in source file displaywriter.v
     Info (12023): Found entity 1: displayWriter
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 5 errors, 1 warning
-    Error: Peak virtual memory: 530 megabytes
-    Error: Processing ended: Wed May 09 23:13:18 2018
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12021): Found 1 design units, including 1 entities, in source file registerfile.v
+    Info (12023): Found entity 1: registerFile
+Info (12127): Elaborating entity "tp1" for the top level hierarchy
+Warning (10034): Output port "LEDG[8..2]" at tp1.v(20) has no driver
+Info (12128): Elaborating entity "displayWriter" for hierarchy "displayWriter:display"
+Info (12128): Elaborating entity "displayDecoder" for hierarchy "displayWriter:display|displayDecoder:display7"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX7[0]" is stuck at GND
+    Warning (13410): Pin "HEX7[1]" is stuck at GND
+    Warning (13410): Pin "HEX7[2]" is stuck at GND
+    Warning (13410): Pin "HEX7[3]" is stuck at GND
+    Warning (13410): Pin "HEX7[4]" is stuck at GND
+    Warning (13410): Pin "HEX7[5]" is stuck at GND
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+    Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "sw15_12[0]"
+    Warning (15610): No output dependent on input pin "sw15_12[1]"
+    Warning (15610): No output dependent on input pin "sw15_12[2]"
+    Warning (15610): No output dependent on input pin "sw15_12[3]"
+Info (21057): Implemented 133 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 47 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 54 warnings
+    Info: Peak virtual memory: 551 megabytes
+    Info: Processing ended: Thu May 10 14:14:47 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
