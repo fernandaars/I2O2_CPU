@@ -1,0 +1,31 @@
+module bcdDisplayer(
+	input[3:0] reg0,
+	input[3:0] reg1,
+	input[3:0] reg2,
+	input[3:0] reg3,
+	input[3:0] reg4,
+	input[3:0] reg5,
+	input[3:0] reg6,
+	input[3:0] reg7,
+	
+	output[6:0] HEX0,
+	output[6:0] HEX1,
+	output[6:0] HEX2,
+	output[6:0] HEX3,
+	output[6:0] HEX4,
+	output[6:0] HEX5,
+	output[6:0] HEX6,
+	output[6:0] HEX7
+);
+
+displayDecoder Display0(.entrada(reg7),.saida(HEX0));
+displayDecoder Display1(.entrada(reg6),.saida(HEX1));
+displayDecoder Display2(.entrada(reg5),.saida(HEX2));
+displayDecoder Display3(.entrada(reg4),.saida(HEX3));
+displayDecoder Display4(.entrada(reg3),.saida(HEX4));
+displayDecoder Display5(.entrada(reg2),.saida(HEX5));
+displayDecoder Display6(.entrada(reg1),.saida(HEX6));
+displayDecoder Display7(.entrada(reg0),.saida(HEX7));
+
+
+endmodule

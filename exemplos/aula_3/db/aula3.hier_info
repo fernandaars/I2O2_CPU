@@ -31,21 +31,23 @@ CLOCK_50 => clk[28].CLK
 CLOCK_50 => clk[29].CLK
 CLOCK_50 => clk[30].CLK
 CLOCK_50 => clk[31].CLK
-KEY[0] => out[0][2].DATAIN
-KEY[0] => out.OUTPUTSELECT
-KEY[0] => out.OUTPUTSELECT
+KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
-SW[0] => out.DATAB
-SW[0] => out.DATAB
-SW[1] => ~NO_FANOUT~
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => ~NO_FANOUT~
-SW[7] => ~NO_FANOUT~
+SW[0] => ~NO_FANOUT~
+SW[1] => out[1][0].DATAIN
+SW[2] => out[2][1].DATAIN
+SW[3] => out[3][0].DATAIN
+SW[3] => out[3][1].DATAIN
+SW[4] => out[4][2].DATAIN
+SW[5] => out[5][0].DATAIN
+SW[5] => out[5][2].DATAIN
+SW[6] => out[6][1].DATAIN
+SW[6] => out[6][2].DATAIN
+SW[7] => out[7][0].DATAIN
+SW[7] => out[7][1].DATAIN
+SW[7] => out[7][2].DATAIN
 SW[8] => ~NO_FANOUT~
 SW[9] => ~NO_FANOUT~
 SW[10] => ~NO_FANOUT~
@@ -65,25 +67,173 @@ LEDG[5] <= <GND>
 LEDG[6] <= <GND>
 LEDG[7] <= <GND>
 LEDG[8] <= <GND>
-HEX0[0] <= displayDecoder:Display1.saida
-HEX0[1] <= displayDecoder:Display1.saida
-HEX0[2] <= displayDecoder:Display1.saida
-HEX0[3] <= displayDecoder:Display1.saida
-HEX0[4] <= displayDecoder:Display1.saida
-HEX0[5] <= displayDecoder:Display1.saida
-HEX0[6] <= displayDecoder:Display1.saida
+HEX0[0] <= displayDecoder:Display0.saida
+HEX0[1] <= displayDecoder:Display0.saida
+HEX0[2] <= displayDecoder:Display0.saida
+HEX0[3] <= displayDecoder:Display0.saida
+HEX0[4] <= displayDecoder:Display0.saida
+HEX0[5] <= displayDecoder:Display0.saida
+HEX0[6] <= displayDecoder:Display0.saida
+HEX1[0] <= displayDecoder:Display1.saida
+HEX1[1] <= displayDecoder:Display1.saida
+HEX1[2] <= displayDecoder:Display1.saida
+HEX1[3] <= displayDecoder:Display1.saida
+HEX1[4] <= displayDecoder:Display1.saida
+HEX1[5] <= displayDecoder:Display1.saida
+HEX1[6] <= displayDecoder:Display1.saida
+HEX2[0] <= displayDecoder:Display2.saida
+HEX2[1] <= displayDecoder:Display2.saida
+HEX2[2] <= displayDecoder:Display2.saida
+HEX2[3] <= displayDecoder:Display2.saida
+HEX2[4] <= displayDecoder:Display2.saida
+HEX2[5] <= displayDecoder:Display2.saida
+HEX2[6] <= displayDecoder:Display2.saida
+HEX3[0] <= displayDecoder:Display3.saida
+HEX3[1] <= displayDecoder:Display3.saida
+HEX3[2] <= displayDecoder:Display3.saida
+HEX3[3] <= displayDecoder:Display3.saida
+HEX3[4] <= displayDecoder:Display3.saida
+HEX3[5] <= displayDecoder:Display3.saida
+HEX3[6] <= displayDecoder:Display3.saida
+HEX4[0] <= displayDecoder:Display4.saida
+HEX4[1] <= displayDecoder:Display4.saida
+HEX4[2] <= displayDecoder:Display4.saida
+HEX4[3] <= displayDecoder:Display4.saida
+HEX4[4] <= displayDecoder:Display4.saida
+HEX4[5] <= displayDecoder:Display4.saida
+HEX4[6] <= displayDecoder:Display4.saida
+HEX5[0] <= displayDecoder:Display5.saida
+HEX5[1] <= displayDecoder:Display5.saida
+HEX5[2] <= displayDecoder:Display5.saida
+HEX5[3] <= displayDecoder:Display5.saida
+HEX5[4] <= displayDecoder:Display5.saida
+HEX5[5] <= displayDecoder:Display5.saida
+HEX5[6] <= displayDecoder:Display5.saida
+HEX6[0] <= displayDecoder:Display6.saida
+HEX6[1] <= displayDecoder:Display6.saida
+HEX6[2] <= displayDecoder:Display6.saida
+HEX6[3] <= displayDecoder:Display6.saida
+HEX6[4] <= displayDecoder:Display6.saida
+HEX6[5] <= displayDecoder:Display6.saida
+HEX6[6] <= displayDecoder:Display6.saida
+HEX7[0] <= displayDecoder:Display7.saida
+HEX7[1] <= displayDecoder:Display7.saida
+HEX7[2] <= displayDecoder:Display7.saida
+HEX7[3] <= displayDecoder:Display7.saida
+HEX7[4] <= displayDecoder:Display7.saida
+HEX7[5] <= displayDecoder:Display7.saida
+HEX7[6] <= displayDecoder:Display7.saida
+
+
+|aula3|displayDecoder:Display0
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |aula3|displayDecoder:Display1
-entrada[0] => Decoder0.IN2
-entrada[1] => Decoder0.IN1
-entrada[2] => Decoder0.IN0
-saida[6] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-saida[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-saida[4] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-saida[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-saida[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aula3|displayDecoder:Display2
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aula3|displayDecoder:Display3
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aula3|displayDecoder:Display4
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aula3|displayDecoder:Display5
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aula3|displayDecoder:Display6
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aula3|displayDecoder:Display7
+entrada[0] => Decoder0.IN3
+entrada[1] => Decoder0.IN2
+entrada[2] => Decoder0.IN1
+entrada[3] => Decoder0.IN0
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

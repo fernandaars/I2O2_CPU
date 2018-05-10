@@ -1,0 +1,8 @@
+module switchesReader(
+	output reg [3:0] codop,
+	output reg [3:0] addA,
+	output reg [3:0] addB_LMM,
+	output reg [3:0] addC,
+);
+
+endmodule
