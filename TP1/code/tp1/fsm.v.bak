@@ -1,0 +1,29 @@
+module fsm(
+	input clk,
+	input[3:0] KEY,
+	output fsm0,
+	output fsm1,
+	output fsm2,
+	output fsm3
+);
+
+	reg [3:0] count;
+	always @(posedge clk) begin
+		if(count == 4'd0) begin
+			fsm0 = 1; fsm1 = 0; fsm2 = 0; fsm3 = 0;
+		end
+		if(count == 4'd1) begin
+			fsm0 = 0; fsm1 = 1; fsm2 = 0; fsm3 = 0;
+		end
+		if(count == 4'd2) begin
+			fsm0 = 0; fsm1 = 0; fsm2 = 1; fsm3 = 0;
+		end
+		
+		count = count + 1;
+		
+		if(count == 4'd3) begin
+			fsm0 = 0; fsm1 = 0; fsm2 = 0; fsm3 = 1;
+			count = 0;
+		end
+	end
+endmodule

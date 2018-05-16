@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tp1
-Thu May 10 14:14:47 2018
+Wed May 16 00:05:37 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,13 +13,26 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Port Connectivity Checks: "displayWriter:display|displayDecoder:display2"
- 11. Port Connectivity Checks: "displayWriter:display|displayDecoder:display3"
- 12. Port Connectivity Checks: "displayWriter:display"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated
+ 15. Source assignments for registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated
+ 16. Parameter Settings for Inferred Entity Instance: registerFile:regFile|altsyncram:registers_rtl_0
+ 17. Parameter Settings for Inferred Entity Instance: registerFile:regFile|altsyncram:registers_rtl_1
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "displayWriter:display|displayDecoder:display2"
+ 20. Port Connectivity Checks: "displayWriter:display|displayDecoder:display3"
+ 21. Port Connectivity Checks: "displayWriter:display"
+ 22. Port Connectivity Checks: "alu:aluExecute"
+ 23. Port Connectivity Checks: "registerFile:regFile"
+ 24. Port Connectivity Checks: "switchesReader:switches"
+ 25. Port Connectivity Checks: "fsm:clockGenerator"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -45,18 +58,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 10 14:14:47 2018      ;
+; Analysis & Synthesis Status        ; Successful - Wed May 16 00:05:37 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; tp1                                        ;
 ; Top-level Entity Name              ; tp1                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 47                                         ;
-;     Total combinational functions  ; 47                                         ;
-;     Dedicated logic registers      ; 26                                         ;
-; Total registers                    ; 26                                         ;
-; Total pins                         ; 86                                         ;
+; Total logic elements               ; 117                                        ;
+;     Total combinational functions  ; 101                                        ;
+;     Dedicated logic registers      ; 69                                         ;
+; Total registers                    ; 69                                         ;
+; Total pins                         ; 88                                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
+; Total memory bits                  ; 256                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
@@ -160,15 +173,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
-; displayDecoder.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Fernanda Rodrigues/Desktop/tp1/displayDecoder.v ;         ;
-; tp1.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Fernanda Rodrigues/Desktop/tp1/tp1.v            ;         ;
-; displayWriter.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Fernanda Rodrigues/Desktop/tp1/displayWriter.v  ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; displayDecoder.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Fernanda Rodrigues/Desktop/tp1/displayDecoder.v             ;         ;
+; tp1.v                            ; yes             ; User Verilog HDL File        ; C:/Users/Fernanda Rodrigues/Desktop/tp1/tp1.v                        ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File        ; C:/Users/Fernanda Rodrigues/Desktop/tp1/alu.v                        ;         ;
+; switchesReader.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Fernanda Rodrigues/Desktop/tp1/switchesReader.v             ;         ;
+; displayWriter.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Fernanda Rodrigues/Desktop/tp1/displayWriter.v              ;         ;
+; registerFile.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Fernanda Rodrigues/Desktop/tp1/registerFile.v               ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Fernanda Rodrigues/Desktop/tp1/debouncer.v                  ;         ;
+; fsm.v                            ; yes             ; User Verilog HDL File        ; C:/Users/Fernanda Rodrigues/Desktop/tp1/fsm.v                        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_qvc1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Fernanda Rodrigues/Desktop/tp1/db/altsyncram_qvc1.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -176,53 +204,97 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 47             ;
+; Estimated Total logic elements              ; 117            ;
 ;                                             ;                ;
-; Total combinational functions               ; 47             ;
+; Total combinational functions               ; 101            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 21             ;
-;     -- 3 input functions                    ; 1              ;
-;     -- <=2 input functions                  ; 25             ;
+;     -- 4 input functions                    ; 48             ;
+;     -- 3 input functions                    ; 8              ;
+;     -- <=2 input functions                  ; 45             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 23             ;
-;     -- arithmetic mode                      ; 24             ;
+;     -- normal mode                          ; 67             ;
+;     -- arithmetic mode                      ; 34             ;
 ;                                             ;                ;
-; Total registers                             ; 26             ;
-;     -- Dedicated logic registers            ; 26             ;
+; Total registers                             ; 69             ;
+;     -- Dedicated logic registers            ; 69             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 86             ;
+; I/O pins                                    ; 88             ;
+; Total memory bits                           ; 256            ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 26             ;
-; Total fan-out                               ; 296            ;
-; Average fan-out                             ; 1.21           ;
+; Maximum fan-out                             ; 49             ;
+; Total fan-out                               ; 771            ;
+; Average fan-out                             ; 2.13           ;
 +---------------------------------------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
-; |tp1                            ; 47 (26)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 86   ; 0            ; |tp1                                               ; work         ;
-;    |displayWriter:display|      ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display                         ; work         ;
-;       |displayDecoder:display0| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display0 ; work         ;
-;       |displayDecoder:display4| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display4 ; work         ;
-;       |displayDecoder:display6| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display6 ; work         ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                        ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
+; |tp1                                      ; 101 (1)           ; 69 (0)       ; 256         ; 0            ; 0       ; 0         ; 88   ; 0            ; |tp1                                                                                ; work         ;
+;    |displayWriter:display|                ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display                                                          ; work         ;
+;       |displayDecoder:display4|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display4                                  ; work         ;
+;       |displayDecoder:display5|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display5                                  ; work         ;
+;       |displayDecoder:display6|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display6                                  ; work         ;
+;       |displayDecoder:display7|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display7                                  ; work         ;
+;    |fsm:clockGenerator|                   ; 63 (11)           ; 49 (7)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|fsm:clockGenerator                                                             ; work         ;
+;       |debouncer:dbk0|                    ; 26 (26)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|fsm:clockGenerator|debouncer:dbk0                                              ; work         ;
+;       |debouncer:dbk3|                    ; 26 (26)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|fsm:clockGenerator|debouncer:dbk3                                              ; work         ;
+;    |registerFile:regFile|                 ; 9 (9)             ; 8 (8)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile                                                           ; work         ;
+;       |altsyncram:registers_rtl_0|        ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0                                ; work         ;
+;          |altsyncram_qvc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated ; work         ;
+;       |altsyncram:registers_rtl_1|        ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1                                ; work         ;
+;          |altsyncram_qvc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated ; work         ;
+;    |switchesReader:switches|              ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|switchesReader:switches                                                        ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; clk[26..31]                           ; Lost fanout        ;
-; Total Number of Removed Registers = 6 ;                    ;
-+---------------------------------------+--------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                              ;
++-------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256  ; None ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256  ; None ;
++-------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; fsm:clockGenerator|key3Pressed         ; Stuck at GND due to stuck port data_in ;
+; fsm:clockGenerator|key0Pressed         ; Stuck at GND due to stuck port data_in ;
+; fsm:clockGenerator|f2                  ; Stuck at GND due to stuck port data_in ;
+; alu:aluExecute|out[0..14]              ; Stuck at GND due to stuck port clock   ;
+; alu:aluExecute|neg                     ; Stuck at GND due to stuck port clock   ;
+; registerFile:regFile|finalB[8..15]     ; Lost fanout                            ;
+; Total Number of Removed Registers = 27 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                              ;
++--------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++--------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; fsm:clockGenerator|key3Pressed ; Stuck at GND              ; fsm:clockGenerator|f2, alu:aluExecute|out[0], alu:aluExecute|out[1],        ;
+;                                ; due to stuck port data_in ; alu:aluExecute|out[2], alu:aluExecute|out[3], alu:aluExecute|out[4],        ;
+;                                ;                           ; alu:aluExecute|out[5], alu:aluExecute|out[6], alu:aluExecute|out[7],        ;
+;                                ;                           ; alu:aluExecute|out[8], alu:aluExecute|out[9], alu:aluExecute|out[10],       ;
+;                                ;                           ; alu:aluExecute|out[11], alu:aluExecute|out[12], alu:aluExecute|out[13],     ;
+;                                ;                           ; alu:aluExecute|out[14], alu:aluExecute|neg, registerFile:regFile|finalB[8], ;
+;                                ;                           ; registerFile:regFile|finalB[9], registerFile:regFile|finalB[10],            ;
+;                                ;                           ; registerFile:regFile|finalB[11], registerFile:regFile|finalB[12],           ;
+;                                ;                           ; registerFile:regFile|finalB[13], registerFile:regFile|finalB[14],           ;
+;                                ;                           ; registerFile:regFile|finalB[15]                                             ;
++--------------------------------+---------------------------+-----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -230,14 +302,206 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 69    ;
+; Number of registers using Synchronous Clear  ; 36    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 3     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                     ;
++------------------------------------+--------------------------------------+------+
+; Register Name                      ; Megafunction                         ; Type ;
++------------------------------------+--------------------------------------+------+
+; switchesReader:switches|addA[0..3] ; registerFile:regFile|registers_rtl_1 ; RAM  ;
++------------------------------------+--------------------------------------+------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 16:1               ; 15 bits   ; 150 LEs       ; 45 LEs               ; 105 LEs                ; Yes        ; |tp1|alu:aluExecute|out[12] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |tp1|fsm:clockGenerator|f2  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |tp1|alu:aluExecute|Add0    ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |tp1|alu:aluExecute|Add0    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: registerFile:regFile|altsyncram:registers_rtl_0 ;
++------------------------------------+----------------------+--------------------------------------+
+; Parameter Name                     ; Value                ; Type                                 ;
++------------------------------------+----------------------+--------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                              ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                              ;
+; WIDTH_A                            ; 16                   ; Untyped                              ;
+; WIDTHAD_A                          ; 4                    ; Untyped                              ;
+; NUMWORDS_A                         ; 16                   ; Untyped                              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                              ;
+; WIDTH_B                            ; 16                   ; Untyped                              ;
+; WIDTHAD_B                          ; 4                    ; Untyped                              ;
+; NUMWORDS_B                         ; 16                   ; Untyped                              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                              ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                              ;
+; BYTE_SIZE                          ; 8                    ; Untyped                              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
+; INIT_FILE                          ; UNUSED               ; Untyped                              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                              ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                              ;
+; CBXI_PARAMETER                     ; altsyncram_qvc1      ; Untyped                              ;
++------------------------------------+----------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: registerFile:regFile|altsyncram:registers_rtl_1 ;
++------------------------------------+----------------------+--------------------------------------+
+; Parameter Name                     ; Value                ; Type                                 ;
++------------------------------------+----------------------+--------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                              ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                              ;
+; WIDTH_A                            ; 16                   ; Untyped                              ;
+; WIDTHAD_A                          ; 4                    ; Untyped                              ;
+; NUMWORDS_A                         ; 16                   ; Untyped                              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                              ;
+; WIDTH_B                            ; 16                   ; Untyped                              ;
+; WIDTHAD_B                          ; 4                    ; Untyped                              ;
+; NUMWORDS_B                         ; 16                   ; Untyped                              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                              ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                              ;
+; BYTE_SIZE                          ; 8                    ; Untyped                              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
+; INIT_FILE                          ; UNUSED               ; Untyped                              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                              ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                              ;
+; CBXI_PARAMETER                     ; altsyncram_qvc1      ; Untyped                              ;
++------------------------------------+----------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                            ;
++-------------------------------------------+-------------------------------------------------+
+; Name                                      ; Value                                           ;
++-------------------------------------------+-------------------------------------------------+
+; Number of entity instances                ; 2                                               ;
+; Entity Instance                           ; registerFile:regFile|altsyncram:registers_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                       ;
+;     -- WIDTH_A                            ; 16                                              ;
+;     -- NUMWORDS_A                         ; 16                                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                    ;
+;     -- WIDTH_B                            ; 16                                              ;
+;     -- NUMWORDS_B                         ; 16                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                       ;
+; Entity Instance                           ; registerFile:regFile|altsyncram:registers_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                       ;
+;     -- WIDTH_A                            ; 16                                              ;
+;     -- NUMWORDS_A                         ; 16                                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                    ;
+;     -- WIDTH_B                            ; 16                                              ;
+;     -- NUMWORDS_B                         ; 16                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                       ;
++-------------------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------+
@@ -258,15 +522,66 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+-------+----------+---------------------------------------------+
 
 
-+---------------------------------------------------+
-; Port Connectivity Checks: "displayWriter:display" ;
-+------------+-------+----------+-------------------+
-; Port       ; Type  ; Severity ; Details           ;
-+------------+-------+----------+-------------------+
-; reg0[7..4] ; Input ; Info     ; Stuck at GND      ;
-; reg1[7..4] ; Input ; Info     ; Stuck at GND      ;
-; reg2[7..4] ; Input ; Info     ; Stuck at GND      ;
-+------------+-------+----------+-------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayWriter:display"                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reg0 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; reg1 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; reg2 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluExecute"                                                                                                                                                                        ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; neg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; zero     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:regFile"                                                                                                                                                                   ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk0       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; clk1       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; RWsignal   ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; addrARead  ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
+; addrBRead  ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
+; addrCWrite ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "switchesReader:switches"                                                                                                                                                               ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; addA     ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND.              ;
+; addB_LMM ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND.              ;
+; addC     ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND.              ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fsm:clockGenerator"                                                                                                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; fsm0 ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
+; fsm1 ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
+; fsm2 ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
+; fsm3 ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -274,7 +589,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -284,7 +599,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu May 10 14:14:45 2018
+    Info: Processing started: Wed May 16 00:05:23 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tp1 -c tp1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file displaydecoder.v
@@ -299,11 +614,247 @@ Info (12021): Found 1 design units, including 1 entities, in source file display
     Info (12023): Found entity 1: displayWriter
 Info (12021): Found 1 design units, including 1 entities, in source file registerfile.v
     Info (12023): Found entity 1: registerFile
+Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
+    Info (12023): Found entity 1: debouncer
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
+    Info (12023): Found entity 1: fsm
 Info (12127): Elaborating entity "tp1" for the top level hierarchy
-Warning (10034): Output port "LEDG[8..2]" at tp1.v(20) has no driver
+Warning (10034): Output port "LEDG" at tp1.v(16) has no driver
+Info (12128): Elaborating entity "fsm" for hierarchy "fsm:clockGenerator"
+Warning (10230): Verilog HDL assignment warning at fsm.v(40): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "debouncer" for hierarchy "fsm:clockGenerator|debouncer:dbk0"
+Info (12128): Elaborating entity "switchesReader" for hierarchy "switchesReader:switches"
+Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:regFile"
+Info (12128): Elaborating entity "alu" for hierarchy "alu:aluExecute"
 Info (12128): Elaborating entity "displayWriter" for hierarchy "displayWriter:display"
 Info (12128): Elaborating entity "displayDecoder" for hierarchy "displayWriter:display|displayDecoder:display7"
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "addA[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[4]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[4]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[4]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[31]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[30]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[29]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[28]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[27]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[26]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[25]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[24]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[23]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[22]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[21]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[20]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[19]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[18]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[17]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[16]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[15]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[14]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[13]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[12]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[11]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[10]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[9]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[8]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[7]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[6]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[5]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[4]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[3]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[2]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm0[1]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[31]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[30]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[29]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[28]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[27]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[26]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[25]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[24]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[23]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[22]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[21]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[20]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[19]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[18]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[17]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[16]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[15]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[14]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[13]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[12]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[11]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[10]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[9]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[8]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[7]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[6]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[5]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[4]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[3]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[2]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm1[1]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[31]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[30]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[29]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[28]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[27]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[26]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[25]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[24]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[23]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[22]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[21]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[20]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[19]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[18]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[17]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[16]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[15]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[14]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[13]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[12]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[11]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[10]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[9]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[8]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[7]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[6]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[5]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[4]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[3]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[2]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm2[1]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[31]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[30]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[29]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[28]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[27]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[26]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[25]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[24]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[23]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[22]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[21]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[20]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[19]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[18]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[17]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[16]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[15]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[14]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[13]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[12]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[11]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[10]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[9]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[8]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[7]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[6]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[5]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[4]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[3]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[2]" is missing source, defaulting to GND
+    Warning (12110): Net "fsm3[1]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[4]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[4]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[4]" is missing source, defaulting to GND
+Warning (276027): Inferred dual-clock RAM node "registerFile:regFile|registers_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "registerFile:regFile|registers_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "registerFile:regFile|registers_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "registerFile:regFile|altsyncram:registers_rtl_0"
+Info (12133): Instantiated megafunction "registerFile:regFile|altsyncram:registers_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "16"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qvc1.tdf
+    Info (12023): Found entity 1: altsyncram_qvc1
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a8"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a9"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a10"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a11"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a12"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a13"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a14"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a15"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a8"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a9"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a10"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a11"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a12"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a13"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a14"
+        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a15"
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC
     Warning (13410): Pin "HEX1[0]" is stuck at GND
     Warning (13410): Pin "HEX1[1]" is stuck at GND
     Warning (13410): Pin "HEX1[2]" is stuck at GND
@@ -325,20 +876,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[4]" is stuck at GND
     Warning (13410): Pin "HEX3[5]" is stuck at GND
     Warning (13410): Pin "HEX3[6]" is stuck at VCC
-    Warning (13410): Pin "HEX5[0]" is stuck at GND
-    Warning (13410): Pin "HEX5[1]" is stuck at GND
-    Warning (13410): Pin "HEX5[2]" is stuck at GND
-    Warning (13410): Pin "HEX5[3]" is stuck at GND
-    Warning (13410): Pin "HEX5[4]" is stuck at GND
-    Warning (13410): Pin "HEX5[5]" is stuck at GND
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC
-    Warning (13410): Pin "HEX7[0]" is stuck at GND
-    Warning (13410): Pin "HEX7[1]" is stuck at GND
-    Warning (13410): Pin "HEX7[2]" is stuck at GND
-    Warning (13410): Pin "HEX7[3]" is stuck at GND
-    Warning (13410): Pin "HEX7[4]" is stuck at GND
-    Warning (13410): Pin "HEX7[5]" is stuck at GND
-    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+    Warning (13410): Pin "LEDG[0]" is stuck at GND
+    Warning (13410): Pin "LEDG[1]" is stuck at GND
     Warning (13410): Pin "LEDG[2]" is stuck at GND
     Warning (13410): Pin "LEDG[3]" is stuck at GND
     Warning (13410): Pin "LEDG[4]" is stuck at GND
@@ -347,26 +886,23 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[7]" is stuck at GND
     Warning (13410): Pin "LEDG[8]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]"
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
-    Warning (15610): No output dependent on input pin "KEY[3]"
-    Warning (15610): No output dependent on input pin "sw15_12[0]"
-    Warning (15610): No output dependent on input pin "sw15_12[1]"
-    Warning (15610): No output dependent on input pin "sw15_12[2]"
-    Warning (15610): No output dependent on input pin "sw15_12[3]"
-Info (21057): Implemented 133 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 21 input pins
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
     Info (21059): Implemented 65 output pins
-    Info (21061): Implemented 47 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 551 megabytes
-    Info: Processing ended: Thu May 10 14:14:47 2018
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 119 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 216 warnings
+    Info: Peak virtual memory: 571 megabytes
+    Info: Processing ended: Wed May 16 00:05:37 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:07
 
 
