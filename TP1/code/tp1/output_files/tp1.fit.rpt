@@ -1,5 +1,5 @@
 Fitter report for tp1
-Wed May 16 00:06:56 2018
+Thu May 17 13:09:24 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -70,20 +70,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed May 16 00:06:56 2018      ;
+; Fitter Status                      ; Successful - Thu May 17 13:09:24 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; tp1                                        ;
 ; Top-level Entity Name              ; tp1                                        ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 115 / 114,480 ( < 1 % )                    ;
-;     Total combinational functions  ; 101 / 114,480 ( < 1 % )                    ;
-;     Dedicated logic registers      ; 69 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 69                                         ;
+; Total logic elements               ; 268 / 114,480 ( < 1 % )                    ;
+;     Total combinational functions  ; 258 / 114,480 ( < 1 % )                    ;
+;     Dedicated logic registers      ; 77 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 77                                         ;
 ; Total pins                         ; 88 / 529 ( 17 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 256 / 3,981,312 ( < 1 % )                  ;
+; Total memory bits                  ; 512 / 3,981,312 ( < 1 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
@@ -683,8 +683,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 376 ) ; 0.00 % ( 0 / 376 )         ; 0.00 % ( 0 / 376 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 376 ) ; 0.00 % ( 0 / 376 )         ; 0.00 % ( 0 / 376 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 558 ) ; 0.00 % ( 0 / 558 )         ; 0.00 % ( 0 / 558 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 558 ) ; 0.00 % ( 0 / 558 )         ; 0.00 % ( 0 / 558 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -707,7 +707,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 366 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 548 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -723,26 +723,26 @@ The pin-out file can be found in C:/Users/Fernanda Rodrigues/Desktop/tp1/output_
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Total logic elements                        ; 115 / 114,480 ( < 1 % )      ;
-;     -- Combinational with no register       ; 46                           ;
-;     -- Register only                        ; 14                           ;
-;     -- Combinational with a register        ; 55                           ;
+; Total logic elements                        ; 268 / 114,480 ( < 1 % )      ;
+;     -- Combinational with no register       ; 191                          ;
+;     -- Register only                        ; 10                           ;
+;     -- Combinational with a register        ; 67                           ;
 ;                                             ;                              ;
 ; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 48                           ;
-;     -- 3 input functions                    ; 8                            ;
-;     -- <=2 input functions                  ; 45                           ;
-;     -- Register only                        ; 14                           ;
+;     -- 4 input functions                    ; 106                          ;
+;     -- 3 input functions                    ; 78                           ;
+;     -- <=2 input functions                  ; 74                           ;
+;     -- Register only                        ; 10                           ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 67                           ;
-;     -- arithmetic mode                      ; 34                           ;
+;     -- normal mode                          ; 193                          ;
+;     -- arithmetic mode                      ; 65                           ;
 ;                                             ;                              ;
-; Total registers*                            ; 69 / 117,053 ( < 1 % )       ;
-;     -- Dedicated logic registers            ; 69 / 114,480 ( < 1 % )       ;
+; Total registers*                            ; 77 / 117,053 ( < 1 % )       ;
+;     -- Dedicated logic registers            ; 77 / 114,480 ( < 1 % )       ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )            ;
 ;                                             ;                              ;
-; Total LABs:  partially or completely used   ; 14 / 7,155 ( < 1 % )         ;
+; Total LABs:  partially or completely used   ; 24 / 7,155 ( < 1 % )         ;
 ; Virtual pins                                ; 0                            ;
 ; I/O pins                                    ; 88 / 529 ( 17 % )            ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )               ;
@@ -750,7 +750,7 @@ The pin-out file can be found in C:/Users/Fernanda Rodrigues/Desktop/tp1/output_
 ;                                             ;                              ;
 ; Global signals                              ; 4                            ;
 ; M9Ks                                        ; 2 / 432 ( < 1 % )            ;
-; Total block memory bits                     ; 256 / 3,981,312 ( < 1 % )    ;
+; Total block memory bits                     ; 512 / 3,981,312 ( < 1 % )    ;
 ; Total block memory implementation bits      ; 18,432 / 3,981,312 ( < 1 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )              ;
 ; PLLs                                        ; 0 / 4 ( 0 % )                ;
@@ -760,11 +760,11 @@ The pin-out file can be found in C:/Users/Fernanda Rodrigues/Desktop/tp1/output_
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )                ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )                ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                 ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%                 ;
-; Maximum fan-out                             ; 56                           ;
-; Highest non-global fan-out                  ; 19                           ;
-; Total fan-out                               ; 597                          ;
-; Average fan-out                             ; 1.60                         ;
+; Peak interconnect usage (total/H/V)         ; 3% / 3% / 3%                 ;
+; Maximum fan-out                             ; 118                          ;
+; Highest non-global fan-out                  ; 47                           ;
+; Total fan-out                               ; 1117                         ;
+; Average fan-out                             ; 2.09                         ;
 +---------------------------------------------+------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -777,31 +777,31 @@ The pin-out file can be found in C:/Users/Fernanda Rodrigues/Desktop/tp1/output_
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 115 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 46                     ; 0                              ;
-;     -- Register only                        ; 14                     ; 0                              ;
-;     -- Combinational with a register        ; 55                     ; 0                              ;
+; Total logic elements                        ; 268 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 191                    ; 0                              ;
+;     -- Register only                        ; 10                     ; 0                              ;
+;     -- Combinational with a register        ; 67                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 48                     ; 0                              ;
-;     -- 3 input functions                    ; 8                      ; 0                              ;
-;     -- <=2 input functions                  ; 45                     ; 0                              ;
-;     -- Register only                        ; 14                     ; 0                              ;
+;     -- 4 input functions                    ; 106                    ; 0                              ;
+;     -- 3 input functions                    ; 78                     ; 0                              ;
+;     -- <=2 input functions                  ; 74                     ; 0                              ;
+;     -- Register only                        ; 10                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 67                     ; 0                              ;
-;     -- arithmetic mode                      ; 34                     ; 0                              ;
+;     -- normal mode                          ; 193                    ; 0                              ;
+;     -- arithmetic mode                      ; 65                     ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 69                     ; 0                              ;
-;     -- Dedicated logic registers            ; 69 / 114480 ( < 1 % )  ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 77                     ; 0                              ;
+;     -- Dedicated logic registers            ; 77 / 114480 ( < 1 % )  ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 14 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 24 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 88                     ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )        ; 0 / 532 ( 0 % )                ;
-; Total memory bits                           ; 256                    ; 0                              ;
+; Total memory bits                           ; 512                    ; 0                              ;
 ; Total RAM block bits                        ; 18432                  ; 0                              ;
 ; M9K                                         ; 2 / 432 ( < 1 % )      ; 0 / 432 ( 0 % )                ;
 ; Clock control block                         ; 4 / 24 ( 16 % )        ; 0 / 24 ( 0 % )                 ;
@@ -813,8 +813,8 @@ The pin-out file can be found in C:/Users/Fernanda Rodrigues/Desktop/tp1/output_
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 650                    ; 5                              ;
-;     -- Registered Connections               ; 191                    ; 0                              ;
+;     -- Total Connections                    ; 1198                   ; 5                              ;
+;     -- Registered Connections               ; 302                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 0                              ;
@@ -1776,21 +1776,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                 ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
-; |tp1                                      ; 115 (1)     ; 69 (0)                    ; 0 (0)         ; 256         ; 2    ; 0            ; 0       ; 0         ; 88   ; 0            ; 46 (1)       ; 14 (0)            ; 55 (0)           ; |tp1                                                                                ; work         ;
-;    |displayWriter:display|                ; 28 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 0 (0)            ; |tp1|displayWriter:display                                                          ; work         ;
+; |tp1                                      ; 268 (17)    ; 77 (0)                    ; 0 (0)         ; 512         ; 2    ; 0            ; 0       ; 0         ; 88   ; 0            ; 191 (17)     ; 10 (0)            ; 67 (3)           ; |tp1                                                                                ; work         ;
+;    |alu:aluExecute|                       ; 136 (136)   ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 118 (118)    ; 0 (0)             ; 18 (18)          ; |tp1|alu:aluExecute                                                                 ; work         ;
+;    |debouncer:dbk0|                       ; 27 (27)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 1 (1)             ; 20 (20)          ; |tp1|debouncer:dbk0                                                                 ; work         ;
+;    |debouncer:dbk3|                       ; 28 (28)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 2 (2)             ; 19 (19)          ; |tp1|debouncer:dbk3                                                                 ; work         ;
+;    |displayWriter:display|                ; 42 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 42 (0)       ; 0 (0)             ; 0 (0)            ; |tp1|displayWriter:display                                                          ; work         ;
+;       |displayDecoder:display0|           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |tp1|displayWriter:display|displayDecoder:display0                                  ; work         ;
+;       |displayDecoder:display1|           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |tp1|displayWriter:display|displayDecoder:display1                                  ; work         ;
 ;       |displayDecoder:display4|           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |tp1|displayWriter:display|displayDecoder:display4                                  ; work         ;
 ;       |displayDecoder:display5|           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |tp1|displayWriter:display|displayDecoder:display5                                  ; work         ;
 ;       |displayDecoder:display6|           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |tp1|displayWriter:display|displayDecoder:display6                                  ; work         ;
 ;       |displayDecoder:display7|           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |tp1|displayWriter:display|displayDecoder:display7                                  ; work         ;
-;    |fsm:clockGenerator|                   ; 66 (12)     ; 49 (7)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (5)       ; 3 (1)             ; 46 (6)           ; |tp1|fsm:clockGenerator                                                             ; work         ;
-;       |debouncer:dbk0|                    ; 27 (27)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 1 (1)             ; 20 (20)          ; |tp1|fsm:clockGenerator|debouncer:dbk0                                              ; work         ;
-;       |debouncer:dbk3|                    ; 27 (27)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 1 (1)             ; 20 (20)          ; |tp1|fsm:clockGenerator|debouncer:dbk3                                              ; work         ;
-;    |registerFile:regFile|                 ; 9 (9)       ; 8 (8)                     ; 0 (0)         ; 256         ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 9 (9)            ; |tp1|registerFile:regFile                                                           ; work         ;
-;       |altsyncram:registers_rtl_0|        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0                                ; work         ;
-;          |altsyncram_qvc1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated ; work         ;
-;       |altsyncram:registers_rtl_1|        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1                                ; work         ;
-;          |altsyncram_qvc1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 128         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated ; work         ;
-;    |switchesReader:switches|              ; 12 (12)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 11 (11)           ; 1 (1)            ; |tp1|switchesReader:switches                                                        ; work         ;
+;    |fsm:clockGenerator|                   ; 8 (8)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 7 (7)            ; |tp1|fsm:clockGenerator                                                             ; work         ;
+;    |registerFile:regFile|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 512         ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile                                                           ; work         ;
+;       |altsyncram:registers_rtl_0|        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0                                ; work         ;
+;          |altsyncram_qvc1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated ; work         ;
+;       |altsyncram:registers_rtl_1|        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1                                ; work         ;
+;          |altsyncram_qvc1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 256         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated ; work         ;
+;    |switchesReader:switches|              ; 12 (12)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 5 (5)            ; |tp1|switchesReader:switches                                                        ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1869,25 +1872,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDG[6]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDG[7]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDG[8]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SW[8]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[9]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[10]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[11]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[4]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[5]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[5]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[6]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[7]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[8]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[9]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[10]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[11]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; CLOCK_50 ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; SW[14]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[12]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[15]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[13]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[14]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[12]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; CLOCK_50 ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; SW[0]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[1]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[2]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[3]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[2]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[3]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; KEY[3]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; KEY[0]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; KEY[3]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1900,330 +1903,530 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; KEY[2]                                                                                             ;                   ;         ;
 ; SW[16]                                                                                             ;                   ;         ;
 ; SW[17]                                                                                             ;                   ;         ;
-; SW[8]                                                                                              ;                   ;         ;
-;      - registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-; SW[9]                                                                                              ;                   ;         ;
-;      - registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-; SW[10]                                                                                             ;                   ;         ;
-;      - registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-; SW[11]                                                                                             ;                   ;         ;
-;      - registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; SW[4]                                                                                              ;                   ;         ;
+;      - switchesReader:switches|addB_LMM[0]                                                         ; 1                 ; 6       ;
 ;      - registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
-;      - switchesReader:switches|addB_LMM[0]~feeder                                                  ; 1                 ; 6       ;
 ; SW[5]                                                                                              ;                   ;         ;
-;      - switchesReader:switches|addB_LMM[1]                                                         ; 1                 ; 6       ;
-;      - registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+;      - switchesReader:switches|addB_LMM[1]                                                         ; 0                 ; 6       ;
+;      - registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; SW[6]                                                                                              ;                   ;         ;
 ;      - switchesReader:switches|addB_LMM[2]                                                         ; 0                 ; 6       ;
 ;      - registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
 ; SW[7]                                                                                              ;                   ;         ;
+;      - switchesReader:switches|addB_LMM[3]                                                         ; 0                 ; 6       ;
 ;      - registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
-;      - switchesReader:switches|addB_LMM[3]~feeder                                                  ; 0                 ; 6       ;
-; SW[15]                                                                                             ;                   ;         ;
-;      - switchesReader:switches|codop[3]~feeder                                                     ; 1                 ; 6       ;
-; SW[13]                                                                                             ;                   ;         ;
-;      - switchesReader:switches|codop[1]~feeder                                                     ; 0                 ; 6       ;
+; SW[8]                                                                                              ;                   ;         ;
+;      - registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+; SW[9]                                                                                              ;                   ;         ;
+;      - registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 1                 ; 6       ;
+; SW[10]                                                                                             ;                   ;         ;
+;      - registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+; SW[11]                                                                                             ;                   ;         ;
+;      - registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 0                 ; 6       ;
+; CLOCK_50                                                                                           ;                   ;         ;
 ; SW[14]                                                                                             ;                   ;         ;
 ;      - switchesReader:switches|codop[2]                                                            ; 1                 ; 6       ;
 ; SW[12]                                                                                             ;                   ;         ;
-;      - switchesReader:switches|codop[0]~feeder                                                     ; 1                 ; 6       ;
-; CLOCK_50                                                                                           ;                   ;         ;
+;      - switchesReader:switches|codop[0]                                                            ; 0                 ; 6       ;
+; SW[15]                                                                                             ;                   ;         ;
+;      - switchesReader:switches|codop[3]                                                            ; 1                 ; 6       ;
+; SW[13]                                                                                             ;                   ;         ;
+;      - switchesReader:switches|codop[1]~feeder                                                     ; 0                 ; 6       ;
 ; SW[0]                                                                                              ;                   ;         ;
-;      - switchesReader:switches|addC[0]                                                             ; 0                 ; 6       ;
+;      - switchesReader:switches|addC[0]~feeder                                                      ; 0                 ; 6       ;
 ; SW[1]                                                                                              ;                   ;         ;
 ;      - switchesReader:switches|addC[1]~feeder                                                      ; 0                 ; 6       ;
 ; SW[2]                                                                                              ;                   ;         ;
-;      - switchesReader:switches|addC[2]~feeder                                                      ; 1                 ; 6       ;
+;      - switchesReader:switches|addC[2]~feeder                                                      ; 0                 ; 6       ;
 ; SW[3]                                                                                              ;                   ;         ;
-;      - switchesReader:switches|addC[3]~feeder                                                      ; 0                 ; 6       ;
-; KEY[0]                                                                                             ;                   ;         ;
-;      - fsm:clockGenerator|debouncer:dbk0|PB_sync_0~feeder                                          ; 1                 ; 6       ;
+;      - switchesReader:switches|addC[3]~feeder                                                      ; 1                 ; 6       ;
 ; KEY[3]                                                                                             ;                   ;         ;
-;      - fsm:clockGenerator|debouncer:dbk3|PB_sync_0~feeder                                          ; 1                 ; 6       ;
+;      - debouncer:dbk3|PB_sync_0~feeder                                                             ; 0                 ; 6       ;
+; KEY[0]                                                                                             ;                   ;         ;
+;      - debouncer:dbk0|PB_sync_0~feeder                                                             ; 1                 ; 6       ;
 +----------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                      ;
-+------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                     ; Location            ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                                 ; PIN_Y2              ; 49      ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; fsm:clockGenerator|debouncer:dbk0|comb~0 ; LCCOMB_X112_Y33_N30 ; 19      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; fsm:clockGenerator|debouncer:dbk3|comb~0 ; LCCOMB_X110_Y33_N30 ; 19      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; fsm:clockGenerator|f0                    ; FF_X111_Y33_N21     ; 14      ; Clock                      ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; fsm:clockGenerator|f1                    ; FF_X111_Y33_N13     ; 8       ; Clock                      ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; fsm:clockGenerator|f2~0                  ; LCCOMB_X111_Y33_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; fsm:clockGenerator|f3                    ; FF_X111_Y33_N19     ; 3       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; fsm:clockGenerator|f3                    ; FF_X111_Y33_N19     ; 2       ; Clock                      ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-+------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                        ;
++-----------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name                        ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                    ; PIN_Y2             ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                    ; PIN_Y2             ; 48      ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; FETCH_clk                   ; LCCOMB_X105_Y4_N6  ; 14      ; Clock                      ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; WRITEBACK_clk               ; LCCOMB_X105_Y4_N18 ; 2       ; Clock                      ; yes    ; Global Clock         ; GCLK15           ; --                        ;
+; debouncer:dbk0|comb~0       ; LCCOMB_X61_Y47_N18 ; 19      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; debouncer:dbk3|PB_state     ; FF_X105_Y4_N13     ; 16      ; Clock                      ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; debouncer:dbk3|comb~0       ; LCCOMB_X105_Y4_N22 ; 18      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; fsm:clockGenerator|Equal3~0 ; LCCOMB_X105_Y4_N30 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; fsm:clockGenerator|f3       ; FF_X105_Y4_N3      ; 3       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
++-----------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                    ;
-+-----------------------+-----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                  ; Location        ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------+-----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50              ; PIN_Y2          ; 49      ; 1                                    ; Global Clock         ; GCLK4            ; --                        ;
-; fsm:clockGenerator|f0 ; FF_X111_Y33_N21 ; 14      ; 1                                    ; Global Clock         ; GCLK5            ; --                        ;
-; fsm:clockGenerator|f1 ; FF_X111_Y33_N13 ; 8       ; 5                                    ; Global Clock         ; GCLK7            ; --                        ;
-; fsm:clockGenerator|f3 ; FF_X111_Y33_N19 ; 2       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
-+-----------------------+-----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                         ;
++-------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                    ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; CLOCK_50                ; PIN_Y2             ; 48      ; 20                                   ; Global Clock         ; GCLK4            ; --                        ;
+; FETCH_clk               ; LCCOMB_X105_Y4_N6  ; 14      ; 8                                    ; Global Clock         ; GCLK9            ; --                        ;
+; WRITEBACK_clk           ; LCCOMB_X105_Y4_N18 ; 2       ; 0                                    ; Global Clock         ; GCLK15           ; --                        ;
+; debouncer:dbk3|PB_state ; FF_X105_Y4_N13     ; 16      ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
++-------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                                       ;
-+---------------------------------------------------------------------------------------------+---------+
-; Name                                                                                        ; Fan-Out ;
-+---------------------------------------------------------------------------------------------+---------+
-; fsm:clockGenerator|debouncer:dbk3|comb~0                                                    ; 19      ;
-; fsm:clockGenerator|debouncer:dbk0|comb~0                                                    ; 19      ;
-; ~GND                                                                                        ; 16      ;
-; fsm:clockGenerator|count[0]                                                                 ; 9       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_state                                                  ; 8       ;
-; registerFile:regFile|always0~0                                                              ; 8       ;
-; fsm:clockGenerator|count[1]                                                                 ; 7       ;
-; registerFile:regFile|finalB[7]                                                              ; 7       ;
-; registerFile:regFile|finalB[6]                                                              ; 7       ;
-; registerFile:regFile|finalB[5]                                                              ; 7       ;
-; registerFile:regFile|finalB[4]                                                              ; 7       ;
-; registerFile:regFile|finalB[3]                                                              ; 7       ;
-; registerFile:regFile|finalB[2]                                                              ; 7       ;
-; registerFile:regFile|finalB[1]                                                              ; 7       ;
-; registerFile:regFile|finalB[0]                                                              ; 7       ;
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a1 ; 7       ;
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a2 ; 7       ;
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a3 ; 7       ;
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a4 ; 7       ;
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a5 ; 7       ;
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a6 ; 7       ;
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a7 ; 7       ;
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0 ; 7       ;
-; fsm:clockGenerator|count[2]                                                                 ; 5       ;
-; fsm:clockGenerator|count[3]                                                                 ; 4       ;
-; fsm:clockGenerator|f3                                                                       ; 4       ;
-; fsm:clockGenerator|always0~2                                                                ; 3       ;
-; fsm:clockGenerator|f2~0                                                                     ; 3       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_state                                                  ; 3       ;
-; SW[7]~input                                                                                 ; 2       ;
-; SW[6]~input                                                                                 ; 2       ;
-; SW[5]~input                                                                                 ; 2       ;
-; SW[4]~input                                                                                 ; 2       ;
-; fsm:clockGenerator|always0~3                                                                ; 2       ;
-; fsm:clockGenerator|always0~1                                                                ; 2       ;
-; fsm:clockGenerator|always0~0                                                                ; 2       ;
-; switchesReader:switches|addC[3]                                                             ; 2       ;
-; switchesReader:switches|addC[2]                                                             ; 2       ;
-; switchesReader:switches|addC[1]                                                             ; 2       ;
-; switchesReader:switches|addC[0]                                                             ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[13]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[12]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[11]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[10]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[9]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[8]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[7]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[6]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[5]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[4]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[3]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[2]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[1]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[0]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[17]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[16]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[15]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[14]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[13]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[12]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[11]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[10]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[9]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[8]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[7]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[6]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[5]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[4]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[3]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[2]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[1]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[0]                                                 ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[17]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[16]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[15]                                                ; 2       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[14]                                                ; 2       ;
-; KEY[3]~input                                                                                ; 1       ;
-; KEY[0]~input                                                                                ; 1       ;
-; SW[3]~input                                                                                 ; 1       ;
-; SW[2]~input                                                                                 ; 1       ;
-; SW[1]~input                                                                                 ; 1       ;
-; SW[0]~input                                                                                 ; 1       ;
-; SW[12]~input                                                                                ; 1       ;
-; SW[14]~input                                                                                ; 1       ;
-; SW[13]~input                                                                                ; 1       ;
-; SW[15]~input                                                                                ; 1       ;
-; SW[11]~input                                                                                ; 1       ;
-; SW[10]~input                                                                                ; 1       ;
-; SW[9]~input                                                                                 ; 1       ;
-; SW[8]~input                                                                                 ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_sync_0                                                 ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_sync_0                                                 ; 1       ;
-; fsm:clockGenerator|count~1                                                                  ; 1       ;
-; fsm:clockGenerator|count~0                                                                  ; 1       ;
-; fsm:clockGenerator|Add0~1                                                                   ; 1       ;
-; fsm:clockGenerator|Add0~0                                                                   ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_state~6                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_state~5                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_state~4                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_state~3                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_state~2                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_state~1                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_sync_1                                                 ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_state~0                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_state~6                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_state~5                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_state~4                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_state~3                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_state~2                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_state~1                                                ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_sync_1                                                 ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_state~0                                                ; 1       ;
-; fsm:clockGenerator|f0~0                                                                     ; 1       ;
-; fsm:clockGenerator|always0~4                                                                ; 1       ;
-; registerFile:regFile|finalB~7                                                               ; 1       ;
-; registerFile:regFile|finalB~6                                                               ; 1       ;
-; registerFile:regFile|finalB~5                                                               ; 1       ;
-; registerFile:regFile|finalB~4                                                               ; 1       ;
-; registerFile:regFile|finalB~3                                                               ; 1       ;
-; switchesReader:switches|addB_LMM[3]                                                         ; 1       ;
-; registerFile:regFile|finalB~2                                                               ; 1       ;
-; switchesReader:switches|addB_LMM[2]                                                         ; 1       ;
-; registerFile:regFile|finalB~1                                                               ; 1       ;
-; switchesReader:switches|addB_LMM[1]                                                         ; 1       ;
-; registerFile:regFile|finalB~0                                                               ; 1       ;
-; switchesReader:switches|codop[0]                                                            ; 1       ;
-; switchesReader:switches|codop[2]                                                            ; 1       ;
-; switchesReader:switches|codop[1]                                                            ; 1       ;
-; switchesReader:switches|codop[3]                                                            ; 1       ;
-; switchesReader:switches|addB_LMM[0]                                                         ; 1       ;
-; displayWriter:display|displayDecoder:display7|WideOr0~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display7|WideOr1~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display7|WideOr2~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display7|WideOr3~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display7|WideOr4~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display7|WideOr5~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display7|WideOr6~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display6|WideOr0~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display6|WideOr1~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display6|WideOr2~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display6|WideOr3~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display6|WideOr4~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display6|WideOr5~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display6|WideOr6~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display5|WideOr0~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display5|WideOr1~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display5|WideOr2~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display5|WideOr3~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display5|WideOr4~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display5|WideOr5~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display5|WideOr6~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display4|WideOr0~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display4|WideOr1~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display4|WideOr2~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display4|WideOr3~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display4|WideOr4~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display4|WideOr5~0                                     ; 1       ;
-; displayWriter:display|displayDecoder:display4|WideOr6~0                                     ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[17]~52                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[16]~51                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[16]~50                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[15]~49                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[15]~48                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[14]~47                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[14]~46                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[13]~45                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[13]~44                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[12]~43                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[12]~42                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[11]~41                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[11]~40                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[10]~39                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[10]~38                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[9]~37                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[9]~36                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[8]~35                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[8]~34                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[7]~33                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[7]~32                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[6]~31                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[6]~30                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[5]~29                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[5]~28                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[4]~27                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[4]~26                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[3]~25                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[3]~24                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[2]~23                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[2]~22                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[1]~21                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[1]~20                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[0]~19                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk3|PB_cnt[0]~18                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[17]~52                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[16]~51                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[16]~50                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[15]~49                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[15]~48                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[14]~47                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[14]~46                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[13]~45                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[13]~44                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[12]~43                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[12]~42                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[11]~41                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[11]~40                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[10]~39                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[10]~38                                             ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[9]~37                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[9]~36                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[8]~35                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[8]~34                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[7]~33                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[7]~32                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[6]~31                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[6]~30                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[5]~29                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[5]~28                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[4]~27                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[4]~26                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[3]~25                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[3]~24                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[2]~23                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[2]~22                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[1]~21                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[1]~20                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[0]~19                                              ; 1       ;
-; fsm:clockGenerator|debouncer:dbk0|PB_cnt[0]~18                                              ; 1       ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a1 ; 1       ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a2 ; 1       ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a3 ; 1       ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a4 ; 1       ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a5 ; 1       ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a6 ; 1       ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a7 ; 1       ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0 ; 1       ;
-+---------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                        ;
++----------------------------------------------------------------------------------------------+---------+
+; Name                                                                                         ; Fan-Out ;
++----------------------------------------------------------------------------------------------+---------+
+; comb~0                                                                                       ; 47      ;
+; alu:aluExecute|out[7]~0                                                                      ; 25      ;
+; alu:aluExecute|out[7]~1                                                                      ; 24      ;
+; switchesReader:switches|codop[1]                                                             ; 23      ;
+; switchesReader:switches|codop[3]                                                             ; 23      ;
+; switchesReader:switches|codop[0]                                                             ; 23      ;
+; debouncer:dbk0|comb~0                                                                        ; 19      ;
+; debouncer:dbk3|comb~0                                                                        ; 18      ;
+; alu:aluExecute|out[7]~3                                                                      ; 15      ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a1  ; 11      ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a2  ; 11      ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a3  ; 11      ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a4  ; 11      ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a5  ; 11      ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a6  ; 11      ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a7  ; 11      ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0  ; 11      ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a1  ; 10      ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a2  ; 10      ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a3  ; 10      ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a4  ; 10      ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a5  ; 10      ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a6  ; 10      ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a7  ; 10      ;
+; switchesReader:switches|codop[2]                                                             ; 9       ;
+; alu:aluExecute|out[7]                                                                        ; 9       ;
+; alu:aluExecute|out[6]                                                                        ; 9       ;
+; alu:aluExecute|out[5]                                                                        ; 9       ;
+; alu:aluExecute|out[4]                                                                        ; 9       ;
+; alu:aluExecute|out[3]                                                                        ; 9       ;
+; alu:aluExecute|out[2]                                                                        ; 9       ;
+; alu:aluExecute|out[1]                                                                        ; 9       ;
+; alu:aluExecute|out[0]                                                                        ; 9       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0  ; 9       ;
+; fsm:clockGenerator|count[0]                                                                  ; 7       ;
+; debouncer:dbk3|PB_state                                                                      ; 7       ;
+; fsm:clockGenerator|count[1]                                                                  ; 6       ;
+; fsm:clockGenerator|f3                                                                        ; 5       ;
+; fsm:clockGenerator|count[2]                                                                  ; 4       ;
+; fsm:clockGenerator|count[3]                                                                  ; 4       ;
+; debouncer:dbk0|PB_state                                                                      ; 4       ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a8  ; 4       ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a9  ; 4       ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a10 ; 4       ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a11 ; 4       ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a12 ; 4       ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a14 ; 4       ;
+; fsm:clockGenerator|Equal3~0                                                                  ; 3       ;
+; switchesReader:switches|addB_LMM[1]                                                          ; 3       ;
+; switchesReader:switches|addB_LMM[2]                                                          ; 3       ;
+; switchesReader:switches|addB_LMM[3]                                                          ; 3       ;
+; finalB[0]~0                                                                                  ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a13 ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a15 ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a8  ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a9  ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a10 ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a11 ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a12 ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a13 ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a14 ; 3       ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a15 ; 3       ;
+; SW[7]~input                                                                                  ; 2       ;
+; SW[6]~input                                                                                  ; 2       ;
+; SW[5]~input                                                                                  ; 2       ;
+; SW[4]~input                                                                                  ; 2       ;
+; alu:aluExecute|out[8]                                                                        ; 2       ;
+; alu:aluExecute|out[9]                                                                        ; 2       ;
+; alu:aluExecute|out[10]                                                                       ; 2       ;
+; alu:aluExecute|out[11]                                                                       ; 2       ;
+; alu:aluExecute|out[12]                                                                       ; 2       ;
+; alu:aluExecute|out[13]                                                                       ; 2       ;
+; alu:aluExecute|out[14]                                                                       ; 2       ;
+; alu:aluExecute|neg                                                                           ; 2       ;
+; debouncer:dbk3|PB_sync_1                                                                     ; 2       ;
+; switchesReader:switches|addC[3]                                                              ; 2       ;
+; switchesReader:switches|addC[2]                                                              ; 2       ;
+; switchesReader:switches|addC[1]                                                              ; 2       ;
+; switchesReader:switches|addC[0]                                                              ; 2       ;
+; alu:aluExecute|Mux15~5                                                                       ; 2       ;
+; alu:aluExecute|Mux15~3                                                                       ; 2       ;
+; finalB[1]~15                                                                                 ; 2       ;
+; finalB[2]~14                                                                                 ; 2       ;
+; finalB[3]~13                                                                                 ; 2       ;
+; finalB[4]~12                                                                                 ; 2       ;
+; finalB[5]~11                                                                                 ; 2       ;
+; finalB[6]~10                                                                                 ; 2       ;
+; finalB[7]~9                                                                                  ; 2       ;
+; finalB[8]~8                                                                                  ; 2       ;
+; finalB[9]~7                                                                                  ; 2       ;
+; finalB[10]~6                                                                                 ; 2       ;
+; finalB[11]~5                                                                                 ; 2       ;
+; finalB[12]~4                                                                                 ; 2       ;
+; finalB[13]~3                                                                                 ; 2       ;
+; finalB[14]~2                                                                                 ; 2       ;
+; finalB[15]~1                                                                                 ; 2       ;
+; alu:aluExecute|Mux15~2                                                                       ; 2       ;
+; alu:aluExecute|Mux15~1                                                                       ; 2       ;
+; alu:aluExecute|Mux15~0                                                                       ; 2       ;
+; switchesReader:switches|addB_LMM[0]                                                          ; 2       ;
+; debouncer:dbk0|PB_cnt[13]                                                                    ; 2       ;
+; debouncer:dbk0|PB_cnt[12]                                                                    ; 2       ;
+; debouncer:dbk0|PB_cnt[11]                                                                    ; 2       ;
+; debouncer:dbk0|PB_cnt[10]                                                                    ; 2       ;
+; debouncer:dbk0|PB_cnt[9]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[8]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[7]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[6]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[5]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[4]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[3]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[2]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[1]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[0]                                                                     ; 2       ;
+; debouncer:dbk0|PB_cnt[17]                                                                    ; 2       ;
+; debouncer:dbk0|PB_cnt[16]                                                                    ; 2       ;
+; debouncer:dbk0|PB_cnt[15]                                                                    ; 2       ;
+; debouncer:dbk0|PB_cnt[14]                                                                    ; 2       ;
+; debouncer:dbk3|PB_cnt[13]                                                                    ; 2       ;
+; debouncer:dbk3|PB_cnt[12]                                                                    ; 2       ;
+; debouncer:dbk3|PB_cnt[11]                                                                    ; 2       ;
+; debouncer:dbk3|PB_cnt[10]                                                                    ; 2       ;
+; debouncer:dbk3|PB_cnt[9]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[8]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[7]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[6]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[5]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[4]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[3]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[2]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[1]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[0]                                                                     ; 2       ;
+; debouncer:dbk3|PB_cnt[17]                                                                    ; 2       ;
+; debouncer:dbk3|PB_cnt[16]                                                                    ; 2       ;
+; debouncer:dbk3|PB_cnt[15]                                                                    ; 2       ;
+; debouncer:dbk3|PB_cnt[14]                                                                    ; 2       ;
+; KEY[0]~input                                                                                 ; 1       ;
+; KEY[3]~input                                                                                 ; 1       ;
+; SW[3]~input                                                                                  ; 1       ;
+; SW[2]~input                                                                                  ; 1       ;
+; SW[1]~input                                                                                  ; 1       ;
+; SW[0]~input                                                                                  ; 1       ;
+; SW[13]~input                                                                                 ; 1       ;
+; SW[15]~input                                                                                 ; 1       ;
+; SW[12]~input                                                                                 ; 1       ;
+; SW[14]~input                                                                                 ; 1       ;
+; CLOCK_50~input                                                                               ; 1       ;
+; SW[11]~input                                                                                 ; 1       ;
+; SW[10]~input                                                                                 ; 1       ;
+; SW[9]~input                                                                                  ; 1       ;
+; SW[8]~input                                                                                  ; 1       ;
+; fsm:clockGenerator|count[0]~3                                                                ; 1       ;
+; alu:aluExecute|Mux15~7                                                                       ; 1       ;
+; alu:aluExecute|Mux15~6                                                                       ; 1       ;
+; alu:aluExecute|Mux7~2                                                                        ; 1       ;
+; alu:aluExecute|Mux7~1                                                                        ; 1       ;
+; alu:aluExecute|out~15                                                                        ; 1       ;
+; alu:aluExecute|Mux7~0                                                                        ; 1       ;
+; alu:aluExecute|Mux6~2                                                                        ; 1       ;
+; alu:aluExecute|Mux6~1                                                                        ; 1       ;
+; alu:aluExecute|Mux6~0                                                                        ; 1       ;
+; alu:aluExecute|out~14                                                                        ; 1       ;
+; alu:aluExecute|Mux5~2                                                                        ; 1       ;
+; alu:aluExecute|Mux5~1                                                                        ; 1       ;
+; alu:aluExecute|out~13                                                                        ; 1       ;
+; alu:aluExecute|Mux5~0                                                                        ; 1       ;
+; alu:aluExecute|Mux4~2                                                                        ; 1       ;
+; alu:aluExecute|Mux4~1                                                                        ; 1       ;
+; alu:aluExecute|Mux4~0                                                                        ; 1       ;
+; alu:aluExecute|out~12                                                                        ; 1       ;
+; alu:aluExecute|Mux3~2                                                                        ; 1       ;
+; alu:aluExecute|Mux3~1                                                                        ; 1       ;
+; alu:aluExecute|out~11                                                                        ; 1       ;
+; alu:aluExecute|Mux3~0                                                                        ; 1       ;
+; alu:aluExecute|Mux2~3                                                                        ; 1       ;
+; alu:aluExecute|Mux2~2                                                                        ; 1       ;
+; alu:aluExecute|Mux2~1                                                                        ; 1       ;
+; alu:aluExecute|Mux2~0                                                                        ; 1       ;
+; alu:aluExecute|Mux1~2                                                                        ; 1       ;
+; alu:aluExecute|Mux1~1                                                                        ; 1       ;
+; alu:aluExecute|out~10                                                                        ; 1       ;
+; alu:aluExecute|Mux1~0                                                                        ; 1       ;
+; alu:aluExecute|Mux0~3                                                                        ; 1       ;
+; alu:aluExecute|Mux0~2                                                                        ; 1       ;
+; alu:aluExecute|Mux0~1                                                                        ; 1       ;
+; alu:aluExecute|Mux0~0                                                                        ; 1       ;
+; alu:aluExecute|Add0~49                                                                       ; 1       ;
+; alu:aluExecute|Add0~48                                                                       ; 1       ;
+; alu:aluExecute|Add0~47                                                                       ; 1       ;
+; alu:aluExecute|Add0~46                                                                       ; 1       ;
+; alu:aluExecute|Add0~45                                                                       ; 1       ;
+; alu:aluExecute|Add0~44                                                                       ; 1       ;
+; alu:aluExecute|Add0~43                                                                       ; 1       ;
+; alu:aluExecute|Add0~42                                                                       ; 1       ;
+; alu:aluExecute|Add0~41                                                                       ; 1       ;
+; alu:aluExecute|Add0~40                                                                       ; 1       ;
+; alu:aluExecute|Add0~39                                                                       ; 1       ;
+; alu:aluExecute|Add0~38                                                                       ; 1       ;
+; alu:aluExecute|Add0~37                                                                       ; 1       ;
+; alu:aluExecute|Add0~36                                                                       ; 1       ;
+; alu:aluExecute|Add0~35                                                                       ; 1       ;
+; alu:aluExecute|Add0~34                                                                       ; 1       ;
+; debouncer:dbk0|PB_sync_0                                                                     ; 1       ;
+; debouncer:dbk3|PB_sync_0                                                                     ; 1       ;
+; fsm:clockGenerator|count~2                                                                   ; 1       ;
+; fsm:clockGenerator|count[3]~1                                                                ; 1       ;
+; fsm:clockGenerator|count[1]~0                                                                ; 1       ;
+; fsm:clockGenerator|f0~0                                                                      ; 1       ;
+; fsm:clockGenerator|Equal3~1                                                                  ; 1       ;
+; debouncer:dbk0|PB_state~6                                                                    ; 1       ;
+; debouncer:dbk0|PB_state~5                                                                    ; 1       ;
+; debouncer:dbk0|PB_state~4                                                                    ; 1       ;
+; debouncer:dbk0|PB_state~3                                                                    ; 1       ;
+; debouncer:dbk0|PB_state~2                                                                    ; 1       ;
+; debouncer:dbk0|PB_state~1                                                                    ; 1       ;
+; debouncer:dbk0|PB_sync_1                                                                     ; 1       ;
+; debouncer:dbk0|PB_state~0                                                                    ; 1       ;
+; debouncer:dbk3|PB_state~6                                                                    ; 1       ;
+; debouncer:dbk3|PB_state~5                                                                    ; 1       ;
+; debouncer:dbk3|PB_state~4                                                                    ; 1       ;
+; debouncer:dbk3|PB_state~3                                                                    ; 1       ;
+; debouncer:dbk3|PB_state~2                                                                    ; 1       ;
+; debouncer:dbk3|PB_state~1                                                                    ; 1       ;
+; debouncer:dbk3|PB_state~0                                                                    ; 1       ;
+; fsm:clockGenerator|f1~0                                                                      ; 1       ;
+; FETCH_clk                                                                                    ; 1       ;
+; fsm:clockGenerator|f0                                                                        ; 1       ;
+; alu:aluExecute|Mux8~2                                                                        ; 1       ;
+; alu:aluExecute|Mux8~1                                                                        ; 1       ;
+; alu:aluExecute|Mux8~0                                                                        ; 1       ;
+; alu:aluExecute|out~9                                                                         ; 1       ;
+; alu:aluExecute|Add0~31                                                                       ; 1       ;
+; alu:aluExecute|Add0~30                                                                       ; 1       ;
+; alu:aluExecute|Mux9~2                                                                        ; 1       ;
+; alu:aluExecute|Mux9~1                                                                        ; 1       ;
+; alu:aluExecute|out~8                                                                         ; 1       ;
+; alu:aluExecute|Mux9~0                                                                        ; 1       ;
+; alu:aluExecute|Add0~27                                                                       ; 1       ;
+; alu:aluExecute|Add0~26                                                                       ; 1       ;
+; alu:aluExecute|Mux10~2                                                                       ; 1       ;
+; alu:aluExecute|Mux10~1                                                                       ; 1       ;
+; alu:aluExecute|Mux10~0                                                                       ; 1       ;
+; alu:aluExecute|out~7                                                                         ; 1       ;
+; alu:aluExecute|Add0~23                                                                       ; 1       ;
+; alu:aluExecute|Add0~22                                                                       ; 1       ;
+; alu:aluExecute|Mux11~2                                                                       ; 1       ;
+; alu:aluExecute|Mux11~1                                                                       ; 1       ;
+; alu:aluExecute|out~6                                                                         ; 1       ;
+; alu:aluExecute|Mux11~0                                                                       ; 1       ;
+; alu:aluExecute|Add0~19                                                                       ; 1       ;
+; alu:aluExecute|Add0~18                                                                       ; 1       ;
+; alu:aluExecute|Mux12~2                                                                       ; 1       ;
+; alu:aluExecute|Mux12~1                                                                       ; 1       ;
+; alu:aluExecute|Mux12~0                                                                       ; 1       ;
+; alu:aluExecute|out~5                                                                         ; 1       ;
+; alu:aluExecute|Add0~15                                                                       ; 1       ;
+; alu:aluExecute|Add0~14                                                                       ; 1       ;
+; alu:aluExecute|Mux13~2                                                                       ; 1       ;
+; alu:aluExecute|Mux13~1                                                                       ; 1       ;
+; alu:aluExecute|out~4                                                                         ; 1       ;
+; alu:aluExecute|Mux13~0                                                                       ; 1       ;
+; alu:aluExecute|Add0~11                                                                       ; 1       ;
+; alu:aluExecute|Add0~10                                                                       ; 1       ;
+; alu:aluExecute|Mux14~2                                                                       ; 1       ;
+; alu:aluExecute|Mux14~1                                                                       ; 1       ;
+; alu:aluExecute|out~2                                                                         ; 1       ;
+; alu:aluExecute|Mux14~0                                                                       ; 1       ;
+; alu:aluExecute|Add0~7                                                                        ; 1       ;
+; alu:aluExecute|Add0~6                                                                        ; 1       ;
+; alu:aluExecute|Mux15~4                                                                       ; 1       ;
+; alu:aluExecute|Add0~1                                                                        ; 1       ;
+; alu:aluExecute|Add0~0                                                                        ; 1       ;
+; WRITEBACK_clk                                                                                ; 1       ;
+; PRINT_clk~0                                                                                  ; 1       ;
+; fsm:clockGenerator|f1                                                                        ; 1       ;
+; displayWriter:display|displayDecoder:display7|WideOr0~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display7|WideOr1~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display7|WideOr2~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display7|WideOr3~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display7|WideOr4~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display7|WideOr5~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display7|WideOr6~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display6|WideOr0~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display6|WideOr1~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display6|WideOr2~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display6|WideOr3~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display6|WideOr4~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display6|WideOr5~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display6|WideOr6~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display5|WideOr0~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display5|WideOr1~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display5|WideOr2~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display5|WideOr3~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display5|WideOr4~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display5|WideOr5~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display5|WideOr6~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display4|WideOr0~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display4|WideOr1~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display4|WideOr2~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display4|WideOr3~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display4|WideOr4~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display4|WideOr5~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display4|WideOr6~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display1|WideOr0~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display1|WideOr1~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display1|WideOr2~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display1|WideOr3~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display1|WideOr4~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display1|WideOr5~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display1|WideOr6~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display0|WideOr0~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display0|WideOr1~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display0|WideOr2~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display0|WideOr3~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display0|WideOr4~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display0|WideOr5~0                                      ; 1       ;
+; displayWriter:display|displayDecoder:display0|WideOr6~0                                      ; 1       ;
+; alu:aluExecute|Add0~64                                                                       ; 1       ;
+; alu:aluExecute|Add0~63                                                                       ; 1       ;
+; alu:aluExecute|Add0~62                                                                       ; 1       ;
+; alu:aluExecute|Add0~61                                                                       ; 1       ;
+; alu:aluExecute|Add0~60                                                                       ; 1       ;
+; alu:aluExecute|Add0~59                                                                       ; 1       ;
+; alu:aluExecute|Add0~58                                                                       ; 1       ;
+; alu:aluExecute|Add0~57                                                                       ; 1       ;
+; alu:aluExecute|Add0~56                                                                       ; 1       ;
+; alu:aluExecute|Add0~55                                                                       ; 1       ;
+; alu:aluExecute|Add0~54                                                                       ; 1       ;
+; alu:aluExecute|Add0~53                                                                       ; 1       ;
+; alu:aluExecute|Add0~52                                                                       ; 1       ;
+; alu:aluExecute|Add0~51                                                                       ; 1       ;
+; alu:aluExecute|Add0~50                                                                       ; 1       ;
+; debouncer:dbk0|PB_cnt[17]~52                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[16]~51                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[16]~50                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[15]~49                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[15]~48                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[14]~47                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[14]~46                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[13]~45                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[13]~44                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[12]~43                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[12]~42                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[11]~41                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[11]~40                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[10]~39                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[10]~38                                                                 ; 1       ;
+; debouncer:dbk0|PB_cnt[9]~37                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[9]~36                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[8]~35                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[8]~34                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[7]~33                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[7]~32                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[6]~31                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[6]~30                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[5]~29                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[5]~28                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[4]~27                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[4]~26                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[3]~25                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[3]~24                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[2]~23                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[2]~22                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[1]~21                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[1]~20                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[0]~19                                                                  ; 1       ;
+; debouncer:dbk0|PB_cnt[0]~18                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[17]~52                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[16]~51                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[16]~50                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[15]~49                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[15]~48                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[14]~47                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[14]~46                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[13]~45                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[13]~44                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[12]~43                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[12]~42                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[11]~41                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[11]~40                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[10]~39                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[10]~38                                                                 ; 1       ;
+; debouncer:dbk3|PB_cnt[9]~37                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[9]~36                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[8]~35                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[8]~34                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[7]~33                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[7]~32                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[6]~31                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[6]~30                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[5]~29                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[5]~28                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[4]~27                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[4]~26                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[3]~25                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[3]~24                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[2]~23                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[2]~22                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[1]~21                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[1]~20                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[0]~19                                                                  ; 1       ;
+; debouncer:dbk3|PB_cnt[0]~18                                                                  ; 1       ;
+; alu:aluExecute|Add0~33                                                                       ; 1       ;
+; alu:aluExecute|Add0~32                                                                       ; 1       ;
+; alu:aluExecute|Add0~29                                                                       ; 1       ;
+; alu:aluExecute|Add0~28                                                                       ; 1       ;
+; alu:aluExecute|Add0~25                                                                       ; 1       ;
+; alu:aluExecute|Add0~24                                                                       ; 1       ;
+; alu:aluExecute|Add0~21                                                                       ; 1       ;
+; alu:aluExecute|Add0~20                                                                       ; 1       ;
+; alu:aluExecute|Add0~17                                                                       ; 1       ;
+; alu:aluExecute|Add0~16                                                                       ; 1       ;
+; alu:aluExecute|Add0~13                                                                       ; 1       ;
+; alu:aluExecute|Add0~12                                                                       ; 1       ;
+; alu:aluExecute|Add0~9                                                                        ; 1       ;
+; alu:aluExecute|Add0~8                                                                        ; 1       ;
+; alu:aluExecute|LessThan2~30                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~29                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~27                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~25                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~23                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~21                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~19                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~17                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~15                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~13                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~11                                                                  ; 1       ;
+; alu:aluExecute|LessThan2~9                                                                   ; 1       ;
+; alu:aluExecute|LessThan2~7                                                                   ; 1       ;
+; alu:aluExecute|LessThan2~5                                                                   ; 1       ;
+; alu:aluExecute|LessThan2~3                                                                   ; 1       ;
+; alu:aluExecute|LessThan2~1                                                                   ; 1       ;
+; alu:aluExecute|Add0~5                                                                        ; 1       ;
+; alu:aluExecute|Add0~4                                                                        ; 1       ;
+; alu:aluExecute|Add0~3                                                                        ; 1       ;
++----------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+-------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------+----------------------+-----------------+-----------------+---------------+
-; Name                                                                                      ; Type ; Mode             ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF  ; Location      ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; Fits in MLABs ;
-+-------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------+----------------------+-----------------+-----------------+---------------+
-; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256  ; 16                          ; 8                           ; 16                          ; 8                           ; 128                 ; 1    ; None ; M9K_X78_Y5_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
-; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256  ; 16                          ; 8                           ; 16                          ; 8                           ; 128                 ; 1    ; None ; M9K_X78_Y4_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
-+-------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------+----------------------+-----------------+-----------------+---------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+-----------------+-----------------+---------------+
+; Name                                                                                      ; Type ; Mode             ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF  ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; Fits in MLABs ;
++-------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+-----------------+-----------------+---------------+
+; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256  ; 16                          ; 16                          ; 16                          ; 16                          ; 256                 ; 1    ; None ; M9K_X104_Y4_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
+; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256  ; 16                          ; 16                          ; 16                          ; 16                          ; 256                 ; 1    ; None ; M9K_X104_Y6_N0 ; Don't care           ; Old data        ; Old data        ; No - Unknown  ;
++-------------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------+----------------------+-----------------+-----------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
@@ -2232,118 +2435,150 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 119 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 16 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 68 / 209,544 ( < 1 % )  ;
-; Direct links          ; 19 / 342,891 ( < 1 % )  ;
+; Block interconnects   ; 420 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 45 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 298 / 209,544 ( < 1 % ) ;
+; Direct links          ; 62 / 342,891 ( < 1 % )  ;
 ; Global clocks         ; 4 / 20 ( 20 % )         ;
-; Local interconnects   ; 67 / 119,088 ( < 1 % )  ;
-; R24 interconnects     ; 40 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 88 / 289,782 ( < 1 % )  ;
+; Local interconnects   ; 121 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 68 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 332 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 8.21) ; Number of LABs  (Total = 14) ;
-+--------------------------------------------+------------------------------+
-; 1                                          ; 0                            ;
-; 2                                          ; 1                            ;
-; 3                                          ; 0                            ;
-; 4                                          ; 1                            ;
-; 5                                          ; 2                            ;
-; 6                                          ; 0                            ;
-; 7                                          ; 3                            ;
-; 8                                          ; 1                            ;
-; 9                                          ; 0                            ;
-; 10                                         ; 1                            ;
-; 11                                         ; 3                            ;
-; 12                                         ; 0                            ;
-; 13                                         ; 1                            ;
-; 14                                         ; 1                            ;
-; 15                                         ; 0                            ;
-; 16                                         ; 0                            ;
-+--------------------------------------------+------------------------------+
++----------------------------------------------------------------------------+
+; LAB Logic Elements                                                         ;
++---------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 11.17) ; Number of LABs  (Total = 24) ;
++---------------------------------------------+------------------------------+
+; 1                                           ; 1                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 3                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 3                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 11                           ;
++---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.07) ; Number of LABs  (Total = 14) ;
+; LAB-wide Signals  (Average = 0.79) ; Number of LABs  (Total = 24) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 9                            ;
+; 1 Clock                            ; 11                           ;
 ; 1 Sync. clear                      ; 4                            ;
-; 2 Clocks                           ; 2                            ;
+; 2 Clocks                           ; 4                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 12.93) ; Number of LABs  (Total = 14) ;
+; Number of Signals Sourced  (Average = 13.63) ; Number of LABs  (Total = 24) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 4                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 0                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 3                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 3                            ;
+; 19                                           ; 3                            ;
+; 20                                           ; 5                            ;
 ; 21                                           ; 1                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 4.43) ; Number of LABs  (Total = 14) ;
+; Number of Signals Sourced Out  (Average = 6.58) ; Number of LABs  (Total = 24) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
-; 2                                               ; 3                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 2                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 1                            ;
+; 1                                               ; 2                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 7                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 2                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 5.29) ; Number of LABs  (Total = 14) ;
-+---------------------------------------------+------------------------------+
-; 0                                           ; 0                            ;
-; 1                                           ; 0                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 4                            ;
-; 4                                           ; 4                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 2                            ;
-+---------------------------------------------+------------------------------+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 12.67) ; Number of LABs  (Total = 24) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 4                            ;
+; 4                                            ; 4                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 1                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 1                            ;
++----------------------------------------------+------------------------------+
 
 
 +------------------------------------------+
@@ -2476,25 +2711,25 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; LEDG[6]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LEDG[7]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LEDG[8]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[10]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[11]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[6]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[15]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[13]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[10]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[11]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[14]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[12]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[15]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[13]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -2535,32 +2770,57 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------+--------+
 
 
-+-------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                     ;
-+-----------------------+-----------------------+-------------------+
-; Source Clock(s)       ; Destination Clock(s)  ; Delay Added in ns ;
-+-----------------------+-----------------------+-------------------+
-; CLOCK_50              ; fsm:clockGenerator|f3 ; 2.9               ;
-; fsm:clockGenerator|f0 ; fsm:clockGenerator|f3 ; 1.0               ;
-+-----------------------+-----------------------+-------------------+
++---------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                               ;
++-------------------------+-----------------------------------------------+-------------------+
+; Source Clock(s)         ; Destination Clock(s)                          ; Delay Added in ns ;
++-------------------------+-----------------------------------------------+-------------------+
+; CLOCK_50                ; fsm:clockGenerator|f3,debouncer:dbk3|PB_state ; 13.2              ;
+; debouncer:dbk3|PB_state ; fsm:clockGenerator|f3,debouncer:dbk3|PB_state ; 7.3               ;
+; CLOCK_50                ; CLOCK_50                                      ; 7.2               ;
++-------------------------+-----------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                                            ;
-+-------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register                     ; Destination Register                                                                                           ; Delay Added in ns ;
-+-------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
-; fsm:clockGenerator|f3               ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0~porta_we_reg       ; 1.028             ;
-; switchesReader:switches|addC[1]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.301             ;
-; switchesReader:switches|addC[0]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.300             ;
-; switchesReader:switches|addB_LMM[3] ; registerFile:regFile|finalB[3]                                                                                 ; 0.152             ;
-; switchesReader:switches|addB_LMM[2] ; registerFile:regFile|finalB[2]                                                                                 ; 0.152             ;
-; switchesReader:switches|addB_LMM[1] ; registerFile:regFile|finalB[1]                                                                                 ; 0.152             ;
-; switchesReader:switches|addB_LMM[0] ; registerFile:regFile|finalB[0]                                                                                 ; 0.152             ;
-+-------------------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 7 path(s) that have the largest delay added for hold.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                  ;
++---------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register           ; Destination Register                                                                                           ; Delay Added in ns ;
++---------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
+; fsm:clockGenerator|f3     ; registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0~porta_we_reg       ; 3.769             ;
+; debouncer:dbk3|PB_state   ; debouncer:dbk3|PB_state                                                                                        ; 2.473             ;
+; debouncer:dbk3|PB_sync_1  ; debouncer:dbk3|PB_cnt[0]                                                                                       ; 1.013             ;
+; debouncer:dbk3|PB_cnt[1]  ; debouncer:dbk3|PB_state                                                                                        ; 0.443             ;
+; debouncer:dbk3|PB_cnt[0]  ; debouncer:dbk3|PB_state                                                                                        ; 0.443             ;
+; alu:aluExecute|out[1]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a1~porta_datain_reg0  ; 0.323             ;
+; alu:aluExecute|out[12]    ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a12~porta_datain_reg0 ; 0.319             ;
+; alu:aluExecute|out[13]    ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a13~porta_datain_reg0 ; 0.317             ;
+; alu:aluExecute|out[2]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a2~porta_datain_reg0  ; 0.310             ;
+; alu:aluExecute|out[3]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a3~porta_datain_reg0  ; 0.301             ;
+; alu:aluExecute|out[14]    ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a14~porta_datain_reg0 ; 0.294             ;
+; alu:aluExecute|out[9]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a9~porta_datain_reg0  ; 0.294             ;
+; alu:aluExecute|out[8]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a8~porta_datain_reg0  ; 0.294             ;
+; alu:aluExecute|out[6]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a6~porta_datain_reg0  ; 0.291             ;
+; alu:aluExecute|out[5]     ; registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a5~porta_datain_reg0  ; 0.290             ;
+; debouncer:dbk3|PB_cnt[12] ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[11] ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[10] ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[9]  ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[8]  ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[7]  ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[6]  ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[5]  ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[4]  ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[3]  ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[2]  ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[13] ; debouncer:dbk3|PB_state                                                                                        ; 0.062             ;
+; debouncer:dbk3|PB_cnt[16] ; debouncer:dbk3|PB_state                                                                                        ; 0.033             ;
+; debouncer:dbk3|PB_cnt[15] ; debouncer:dbk3|PB_state                                                                                        ; 0.033             ;
+; debouncer:dbk3|PB_cnt[14] ; debouncer:dbk3|PB_state                                                                                        ; 0.033             ;
+; debouncer:dbk3|PB_cnt[17] ; debouncer:dbk3|PB_state                                                                                        ; 0.033             ;
++---------------------------+----------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 31 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2597,24 +2857,26 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQue
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK2, DIFFCLK_1p))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
-Info (176353): Automatically promoted node fsm:clockGenerator|f0 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node fsm:clockGenerator|f3 
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node debouncer:dbk0|PB_state
+Info (176353): Automatically promoted node FETCH_clk 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a0
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a1
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a2
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a3
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a4
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a5
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a6
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a7
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a0
-        Info (176357): Destination node registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a1
-        Info (176358): Non-global destination nodes limited to 10 nodes
-Info (176353): Automatically promoted node fsm:clockGenerator|f1 
+        Info (176357): Destination node LEDG[0]~output
+Info (176353): Automatically promoted node WRITEBACK_clk 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node LEDG[3]~output
+Info (176353): Automatically promoted node debouncer:dbk3|PB_state 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node PRINT_clk~0
+        Info (176357): Destination node WRITEBACK_clk
+        Info (176357): Destination node FETCH_clk
+        Info (176357): Destination node debouncer:dbk3|PB_state~1
+        Info (176357): Destination node debouncer:dbk3|PB_state~6
+        Info (176357): Destination node debouncer:dbk3|comb~0
+        Info (176357): Destination node LEDG[2]~output
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -3056,31 +3318,31 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:08
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:08
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X69_Y0 to location X80_Y11
+    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X92_Y0 to location X103_Y11
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.63 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.66 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Fernanda Rodrigues/Desktop/tp1/output_files/tp1.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 443 warnings
-    Info: Peak virtual memory: 1050 megabytes
-    Info: Processing ended: Wed May 16 00:06:57 2018
-    Info: Elapsed time: 00:01:13
-    Info: Total CPU time (on all processors): 00:00:45
+    Info: Peak virtual memory: 1056 megabytes
+    Info: Processing ended: Thu May 17 13:09:25 2018
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +----------------------------+

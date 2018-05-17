@@ -29,7 +29,7 @@ module alu (
 		  4'd6: out = a & b; // andi
 		  4'd7: out = a | b; // ori
 		  4'd8: out = a ^ b; // xori
-		  4'd9: out = a + b; // addi
+		  4'd9: out = b + a; // addi
 		  4'd10: out = a - b; // subi
 		  default: 
 				out = 16'd0;

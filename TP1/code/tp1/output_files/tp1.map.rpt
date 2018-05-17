@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tp1
-Wed May 16 00:05:37 2018
+Thu May 17 13:08:55 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,25 +14,23 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Registers Packed Into Inferred Megafunctions
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated
- 15. Source assignments for registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated
- 16. Parameter Settings for Inferred Entity Instance: registerFile:regFile|altsyncram:registers_rtl_0
- 17. Parameter Settings for Inferred Entity Instance: registerFile:regFile|altsyncram:registers_rtl_1
- 18. altsyncram Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "displayWriter:display|displayDecoder:display2"
- 20. Port Connectivity Checks: "displayWriter:display|displayDecoder:display3"
- 21. Port Connectivity Checks: "displayWriter:display"
- 22. Port Connectivity Checks: "alu:aluExecute"
- 23. Port Connectivity Checks: "registerFile:regFile"
- 24. Port Connectivity Checks: "switchesReader:switches"
- 25. Port Connectivity Checks: "fsm:clockGenerator"
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Registers Packed Into Inferred Megafunctions
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated
+ 13. Source assignments for registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated
+ 14. Parameter Settings for Inferred Entity Instance: registerFile:regFile|altsyncram:registers_rtl_0
+ 15. Parameter Settings for Inferred Entity Instance: registerFile:regFile|altsyncram:registers_rtl_1
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "displayWriter:display|displayDecoder:display2"
+ 18. Port Connectivity Checks: "displayWriter:display|displayDecoder:display3"
+ 19. Port Connectivity Checks: "displayWriter:display"
+ 20. Port Connectivity Checks: "alu:aluExecute"
+ 21. Port Connectivity Checks: "registerFile:regFile"
+ 22. Port Connectivity Checks: "switchesReader:switches"
+ 23. Port Connectivity Checks: "fsm:clockGenerator"
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -58,18 +56,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 16 00:05:37 2018      ;
+; Analysis & Synthesis Status        ; Successful - Thu May 17 13:08:55 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; tp1                                        ;
 ; Top-level Entity Name              ; tp1                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 117                                        ;
-;     Total combinational functions  ; 101                                        ;
-;     Dedicated logic registers      ; 69                                         ;
-; Total registers                    ; 69                                         ;
+; Total logic elements               ; 274                                        ;
+;     Total combinational functions  ; 258                                        ;
+;     Dedicated logic registers      ; 77                                         ;
+; Total registers                    ; 77                                         ;
 ; Total pins                         ; 88                                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 256                                        ;
+; Total memory bits                  ; 512                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
@@ -204,29 +202,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 117            ;
+; Estimated Total logic elements              ; 274            ;
 ;                                             ;                ;
-; Total combinational functions               ; 101            ;
+; Total combinational functions               ; 258            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 48             ;
-;     -- 3 input functions                    ; 8              ;
-;     -- <=2 input functions                  ; 45             ;
+;     -- 4 input functions                    ; 106            ;
+;     -- 3 input functions                    ; 78             ;
+;     -- <=2 input functions                  ; 74             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 67             ;
-;     -- arithmetic mode                      ; 34             ;
+;     -- normal mode                          ; 193            ;
+;     -- arithmetic mode                      ; 65             ;
 ;                                             ;                ;
-; Total registers                             ; 69             ;
-;     -- Dedicated logic registers            ; 69             ;
+; Total registers                             ; 77             ;
+;     -- Dedicated logic registers            ; 77             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 88             ;
-; Total memory bits                           ; 256            ;
+; Total memory bits                           ; 512            ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 49             ;
-; Total fan-out                               ; 771            ;
-; Average fan-out                             ; 2.13           ;
+; Total fan-out                               ; 1514           ;
+; Average fan-out                             ; 2.79           ;
 +---------------------------------------------+----------------+
 
 
@@ -235,20 +233,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; |tp1                                      ; 101 (1)           ; 69 (0)       ; 256         ; 0            ; 0       ; 0         ; 88   ; 0            ; |tp1                                                                                ; work         ;
-;    |displayWriter:display|                ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display                                                          ; work         ;
+; |tp1                                      ; 258 (20)          ; 77 (0)       ; 512         ; 0            ; 0       ; 0         ; 88   ; 0            ; |tp1                                                                                ; work         ;
+;    |alu:aluExecute|                       ; 136 (136)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|alu:aluExecute                                                                 ; work         ;
+;    |debouncer:dbk0|                       ; 26 (26)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|debouncer:dbk0                                                                 ; work         ;
+;    |debouncer:dbk3|                       ; 26 (26)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|debouncer:dbk3                                                                 ; work         ;
+;    |displayWriter:display|                ; 42 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display                                                          ; work         ;
+;       |displayDecoder:display0|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display0                                  ; work         ;
+;       |displayDecoder:display1|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display1                                  ; work         ;
 ;       |displayDecoder:display4|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display4                                  ; work         ;
 ;       |displayDecoder:display5|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display5                                  ; work         ;
 ;       |displayDecoder:display6|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display6                                  ; work         ;
 ;       |displayDecoder:display7|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|displayWriter:display|displayDecoder:display7                                  ; work         ;
-;    |fsm:clockGenerator|                   ; 63 (11)           ; 49 (7)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|fsm:clockGenerator                                                             ; work         ;
-;       |debouncer:dbk0|                    ; 26 (26)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|fsm:clockGenerator|debouncer:dbk0                                              ; work         ;
-;       |debouncer:dbk3|                    ; 26 (26)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|fsm:clockGenerator|debouncer:dbk3                                              ; work         ;
-;    |registerFile:regFile|                 ; 9 (9)             ; 8 (8)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile                                                           ; work         ;
-;       |altsyncram:registers_rtl_0|        ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0                                ; work         ;
-;          |altsyncram_qvc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated ; work         ;
-;       |altsyncram:registers_rtl_1|        ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1                                ; work         ;
-;          |altsyncram_qvc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated ; work         ;
+;    |fsm:clockGenerator|                   ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|fsm:clockGenerator                                                             ; work         ;
+;    |registerFile:regFile|                 ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile                                                           ; work         ;
+;       |altsyncram:registers_rtl_0|        ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0                                ; work         ;
+;          |altsyncram_qvc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated ; work         ;
+;       |altsyncram:registers_rtl_1|        ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1                                ; work         ;
+;          |altsyncram_qvc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated ; work         ;
 ;    |switchesReader:switches|              ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tp1|switchesReader:switches                                                        ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -264,45 +265,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; fsm:clockGenerator|key3Pressed         ; Stuck at GND due to stuck port data_in ;
-; fsm:clockGenerator|key0Pressed         ; Stuck at GND due to stuck port data_in ;
-; fsm:clockGenerator|f2                  ; Stuck at GND due to stuck port data_in ;
-; alu:aluExecute|out[0..14]              ; Stuck at GND due to stuck port clock   ;
-; alu:aluExecute|neg                     ; Stuck at GND due to stuck port clock   ;
-; registerFile:regFile|finalB[8..15]     ; Lost fanout                            ;
-; Total Number of Removed Registers = 27 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                              ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                                      ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------------------+
-; fsm:clockGenerator|key3Pressed ; Stuck at GND              ; fsm:clockGenerator|f2, alu:aluExecute|out[0], alu:aluExecute|out[1],        ;
-;                                ; due to stuck port data_in ; alu:aluExecute|out[2], alu:aluExecute|out[3], alu:aluExecute|out[4],        ;
-;                                ;                           ; alu:aluExecute|out[5], alu:aluExecute|out[6], alu:aluExecute|out[7],        ;
-;                                ;                           ; alu:aluExecute|out[8], alu:aluExecute|out[9], alu:aluExecute|out[10],       ;
-;                                ;                           ; alu:aluExecute|out[11], alu:aluExecute|out[12], alu:aluExecute|out[13],     ;
-;                                ;                           ; alu:aluExecute|out[14], alu:aluExecute|neg, registerFile:regFile|finalB[8], ;
-;                                ;                           ; registerFile:regFile|finalB[9], registerFile:regFile|finalB[10],            ;
-;                                ;                           ; registerFile:regFile|finalB[11], registerFile:regFile|finalB[12],           ;
-;                                ;                           ; registerFile:regFile|finalB[13], registerFile:regFile|finalB[14],           ;
-;                                ;                           ; registerFile:regFile|finalB[15]                                             ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 69    ;
+; Total registers                              ; 77    ;
 ; Number of registers using Synchronous Clear  ; 36    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -321,16 +289,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------+--------------------------------------+------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 16:1               ; 15 bits   ; 150 LEs       ; 45 LEs               ; 105 LEs                ; Yes        ; |tp1|alu:aluExecute|out[12] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |tp1|fsm:clockGenerator|f2  ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |tp1|alu:aluExecute|Add0    ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |tp1|alu:aluExecute|Add0    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 16:1               ; 15 bits   ; 150 LEs       ; 45 LEs               ; 105 LEs                ; Yes        ; |tp1|alu:aluExecute|out[7] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |tp1|fsm:clockGenerator|f1 ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |tp1|alu:aluExecute|Add0   ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |tp1|alu:aluExecute|Add0   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -522,66 +490,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+---------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "displayWriter:display"                                                                                                                                                            ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; clk  ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reg0 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
-; reg1 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
-; reg2 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayWriter:display"                                                                                                                                                           ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reg0 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reg1 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reg2 ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:aluExecute"                                                                                                                                                                        ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; clk      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; neg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; zero     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluExecute"                                                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; neg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "registerFile:regFile"                                                                                                                                                                   ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; clk0       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; clk1       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; RWsignal   ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; addrARead  ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
-; addrBRead  ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
-; addrCWrite ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:regFile"                                                                                                                                                                 ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; addrARead  ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; addrBRead  ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; addrCWrite ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; codop      ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "switchesReader:switches"                                                                                                                                                               ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; clk      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; addA     ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND.              ;
-; addB_LMM ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND.              ;
-; addC     ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND.              ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "switchesReader:switches"                                                                                                                                                  ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                               ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; addA     ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND. ;
+; addB_LMM ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND. ;
+; addC     ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND. ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fsm:clockGenerator"                                                                                                                                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; fsm0 ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-; fsm1 ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-; fsm2 ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-; fsm3 ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fsm:clockGenerator"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; fsm2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -589,7 +549,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -599,7 +559,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed May 16 00:05:23 2018
+    Info: Processing started: Thu May 17 13:08:52 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tp1 -c tp1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file displaydecoder.v
@@ -619,10 +579,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file debounc
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
     Info (12023): Found entity 1: fsm
 Info (12127): Elaborating entity "tp1" for the top level hierarchy
-Warning (10034): Output port "LEDG" at tp1.v(16) has no driver
+Warning (10034): Output port "LEDG[8..4]" at tp1.v(16) has no driver
 Info (12128): Elaborating entity "fsm" for hierarchy "fsm:clockGenerator"
-Warning (10230): Verilog HDL assignment warning at fsm.v(40): truncated value with size 32 to match size of target (4)
-Info (12128): Elaborating entity "debouncer" for hierarchy "fsm:clockGenerator|debouncer:dbk0"
+Warning (10230): Verilog HDL assignment warning at fsm.v(26): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:dbk0"
 Info (12128): Elaborating entity "switchesReader" for hierarchy "switchesReader:switches"
 Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:regFile"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:aluExecute"
@@ -642,130 +602,32 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "addC[5]" is missing source, defaulting to GND
     Warning (12110): Net "addC[4]" is missing source, defaulting to GND
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[31]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[30]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[29]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[28]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[27]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[26]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[25]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[24]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[23]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[22]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[21]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[20]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[19]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[18]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[17]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[16]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[15]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[14]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[13]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[12]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[11]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[10]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[9]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[8]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[7]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[6]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[5]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[4]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[3]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[2]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm0[1]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[31]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[30]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[29]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[28]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[27]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[26]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[25]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[24]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[23]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[22]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[21]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[20]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[19]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[18]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[17]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[16]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[15]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[14]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[13]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[12]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[11]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[10]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[9]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[8]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[7]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[6]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[5]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[4]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[3]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[2]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm1[1]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[31]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[30]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[29]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[28]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[27]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[26]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[25]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[24]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[23]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[22]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[21]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[20]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[19]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[18]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[17]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[16]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[15]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[14]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[13]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[12]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[11]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[10]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[9]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[8]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[7]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[6]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[5]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[4]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[3]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[2]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm2[1]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[31]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[30]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[29]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[28]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[27]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[26]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[25]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[24]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[23]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[22]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[21]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[20]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[19]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[18]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[17]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[16]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[15]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[14]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[13]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[12]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[11]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[10]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[9]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[8]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[7]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[6]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[5]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[4]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[3]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[2]" is missing source, defaulting to GND
-    Warning (12110): Net "fsm3[1]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[4]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[4]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[4]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "addA[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addA[4]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addB_LMM[4]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[7]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[6]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[5]" is missing source, defaulting to GND
+    Warning (12110): Net "addC[4]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "addA[7]" is missing source, defaulting to GND
     Warning (12110): Net "addA[6]" is missing source, defaulting to GND
     Warning (12110): Net "addA[5]" is missing source, defaulting to GND
@@ -779,6 +641,7 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "addC[5]" is missing source, defaulting to GND
     Warning (12110): Net "addC[4]" is missing source, defaulting to GND
 Warning (276027): Inferred dual-clock RAM node "registerFile:regFile|registers_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "registerFile:regFile|registers_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "registerFile:regFile|registers_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -828,40 +691,8 @@ Info (12133): Instantiated megafunction "registerFile:regFile|altsyncram:registe
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qvc1.tdf
     Info (12023): Found entity 1: altsyncram_qvc1
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a8"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a9"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a10"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a11"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a12"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a13"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a14"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_1|altsyncram_qvc1:auto_generated|ram_block1a15"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a8"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a9"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a10"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a11"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a12"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a13"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a14"
-        Warning (14320): Synthesized away node "registerFile:regFile|altsyncram:registers_rtl_0|altsyncram_qvc1:auto_generated|ram_block1a15"
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND
-    Warning (13410): Pin "HEX0[2]" is stuck at GND
-    Warning (13410): Pin "HEX0[3]" is stuck at GND
-    Warning (13410): Pin "HEX0[4]" is stuck at GND
-    Warning (13410): Pin "HEX0[5]" is stuck at GND
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC
-    Warning (13410): Pin "HEX1[0]" is stuck at GND
-    Warning (13410): Pin "HEX1[1]" is stuck at GND
-    Warning (13410): Pin "HEX1[2]" is stuck at GND
-    Warning (13410): Pin "HEX1[3]" is stuck at GND
-    Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at GND
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC
     Warning (13410): Pin "HEX2[0]" is stuck at GND
     Warning (13410): Pin "HEX2[1]" is stuck at GND
     Warning (13410): Pin "HEX2[2]" is stuck at GND
@@ -876,17 +707,12 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[4]" is stuck at GND
     Warning (13410): Pin "HEX3[5]" is stuck at GND
     Warning (13410): Pin "HEX3[6]" is stuck at VCC
-    Warning (13410): Pin "LEDG[0]" is stuck at GND
-    Warning (13410): Pin "LEDG[1]" is stuck at GND
-    Warning (13410): Pin "LEDG[2]" is stuck at GND
-    Warning (13410): Pin "LEDG[3]" is stuck at GND
     Warning (13410): Pin "LEDG[4]" is stuck at GND
     Warning (13410): Pin "LEDG[5]" is stuck at GND
     Warning (13410): Pin "LEDG[6]" is stuck at GND
     Warning (13410): Pin "LEDG[7]" is stuck at GND
     Warning (13410): Pin "LEDG[8]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
@@ -894,15 +720,15 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "SW[16]"
     Warning (15610): No output dependent on input pin "SW[17]"
-Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 394 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 65 output pins
-    Info (21061): Implemented 119 logic cells
-    Info (21064): Implemented 16 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 216 warnings
-    Info: Peak virtual memory: 571 megabytes
-    Info: Processing ended: Wed May 16 00:05:37 2018
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:07
+    Info (21061): Implemented 274 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 83 warnings
+    Info: Peak virtual memory: 583 megabytes
+    Info: Processing ended: Thu May 17 13:08:55 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -1,9 +1,9 @@
 |tp1
-CLOCK_50 => CLOCK_50.IN1
-KEY[0] => KEY[0].IN2
-KEY[1] => KEY[1].IN2
-KEY[2] => KEY[2].IN2
-KEY[3] => KEY[3].IN2
+CLOCK_50 => CLOCK_50.IN3
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => KEY[2].IN1
+KEY[3] => KEY[3].IN1
 SW[0] => SW[0].IN1
 SW[1] => SW[1].IN1
 SW[2] => SW[2].IN1
@@ -78,10 +78,10 @@ HEX7[3] <= displayWriter:display.HEX7
 HEX7[4] <= displayWriter:display.HEX7
 HEX7[5] <= displayWriter:display.HEX7
 HEX7[6] <= displayWriter:display.HEX7
-LEDG[0] <= <GND>
-LEDG[1] <= <GND>
-LEDG[2] <= <GND>
-LEDG[3] <= <GND>
+LEDG[0] <= FETCH_clk.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= PRINT_clk.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= EXECUTE_clk.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= WRITEBACK_clk.DB_MAX_OUTPUT_PORT_TYPE
 LEDG[4] <= <GND>
 LEDG[5] <= <GND>
 LEDG[6] <= <GND>
@@ -90,18 +90,21 @@ LEDG[8] <= <GND>
 
 
 |tp1|fsm:clockGenerator
-clk => clk.IN2
-KEY[0] => _.IN1
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => _.IN1
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => f3.CLK
+clk => f2.CLK
+clk => f1.CLK
+clk => f0.CLK
 fsm0 <= f0.DB_MAX_OUTPUT_PORT_TYPE
 fsm1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
 fsm2 <= f2.DB_MAX_OUTPUT_PORT_TYPE
 fsm3 <= f3.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tp1|fsm:clockGenerator|debouncer:dbk0
+|tp1|debouncer:dbk0
 clk => PB_state~reg0.CLK
 clk => PB_cnt[0].CLK
 clk => PB_cnt[1].CLK
@@ -127,7 +130,7 @@ PB => PB_sync_0.DATAIN
 PB_state <= PB_state~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tp1|fsm:clockGenerator|debouncer:dbk3
+|tp1|debouncer:dbk3
 clk => PB_state~reg0.CLK
 clk => PB_cnt[0].CLK
 clk => PB_cnt[1].CLK
@@ -211,65 +214,41 @@ addC[3] <= addC[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tp1|registerFile:regFile
-clk0 => finalB[0].CLK
-clk0 => finalB[1].CLK
-clk0 => finalB[2].CLK
-clk0 => finalB[3].CLK
-clk0 => finalB[4].CLK
-clk0 => finalB[5].CLK
-clk0 => finalB[6].CLK
-clk0 => finalB[7].CLK
-clk0 => finalB[8].CLK
-clk0 => finalB[9].CLK
-clk0 => finalB[10].CLK
-clk0 => finalB[11].CLK
-clk0 => finalB[12].CLK
-clk0 => finalB[13].CLK
-clk0 => finalB[14].CLK
-clk0 => finalB[15].CLK
-clk1 => registers.we_a.CLK
-clk1 => registers.waddr_a[3].CLK
-clk1 => registers.waddr_a[2].CLK
-clk1 => registers.waddr_a[1].CLK
-clk1 => registers.waddr_a[0].CLK
-clk1 => registers.data_a[15].CLK
-clk1 => registers.data_a[14].CLK
-clk1 => registers.data_a[13].CLK
-clk1 => registers.data_a[12].CLK
-clk1 => registers.data_a[11].CLK
-clk1 => registers.data_a[10].CLK
-clk1 => registers.data_a[9].CLK
-clk1 => registers.data_a[8].CLK
-clk1 => registers.data_a[7].CLK
-clk1 => registers.data_a[6].CLK
-clk1 => registers.data_a[5].CLK
-clk1 => registers.data_a[4].CLK
-clk1 => registers.data_a[3].CLK
-clk1 => registers.data_a[2].CLK
-clk1 => registers.data_a[1].CLK
-clk1 => registers.data_a[0].CLK
-clk1 => registers.CLK0
+clk => registers.we_a.CLK
+clk => registers.waddr_a[3].CLK
+clk => registers.waddr_a[2].CLK
+clk => registers.waddr_a[1].CLK
+clk => registers.waddr_a[0].CLK
+clk => registers.data_a[15].CLK
+clk => registers.data_a[14].CLK
+clk => registers.data_a[13].CLK
+clk => registers.data_a[12].CLK
+clk => registers.data_a[11].CLK
+clk => registers.data_a[10].CLK
+clk => registers.data_a[9].CLK
+clk => registers.data_a[8].CLK
+clk => registers.data_a[7].CLK
+clk => registers.data_a[6].CLK
+clk => registers.data_a[5].CLK
+clk => registers.data_a[4].CLK
+clk => registers.data_a[3].CLK
+clk => registers.data_a[2].CLK
+clk => registers.data_a[1].CLK
+clk => registers.data_a[0].CLK
+clk => registers.CLK0
 RWsignal => registers.we_a.DATAIN
 RWsignal => registers.WE
-codop[0] => LessThan0.IN8
-codop[0] => Equal0.IN3
-codop[1] => LessThan0.IN7
-codop[1] => Equal0.IN0
-codop[2] => LessThan0.IN6
-codop[2] => Equal0.IN2
-codop[3] => LessThan0.IN5
-codop[3] => Equal0.IN1
+codop[0] => ~NO_FANOUT~
+codop[1] => ~NO_FANOUT~
+codop[2] => ~NO_FANOUT~
+codop[3] => ~NO_FANOUT~
 addrARead[0] => registers.RADDR
 addrARead[1] => registers.RADDR1
 addrARead[2] => registers.RADDR2
 addrARead[3] => registers.RADDR3
-addrBRead[0] => finalB.DATAB
 addrBRead[0] => registers.PORTBRADDR
-addrBRead[1] => finalB.DATAB
 addrBRead[1] => registers.PORTBRADDR1
-addrBRead[2] => finalB.DATAB
 addrBRead[2] => registers.PORTBRADDR2
-addrBRead[3] => finalB.DATAB
 addrBRead[3] => registers.PORTBRADDR3
 addrCWrite[0] => registers.waddr_a[0].DATAIN
 addrCWrite[0] => registers.WADDR
@@ -327,22 +306,22 @@ a[12] <= registers.DATAOUT12
 a[13] <= registers.DATAOUT13
 a[14] <= registers.DATAOUT14
 a[15] <= registers.DATAOUT15
-b[0] <= finalB[0].DB_MAX_OUTPUT_PORT_TYPE
-b[1] <= finalB[1].DB_MAX_OUTPUT_PORT_TYPE
-b[2] <= finalB[2].DB_MAX_OUTPUT_PORT_TYPE
-b[3] <= finalB[3].DB_MAX_OUTPUT_PORT_TYPE
-b[4] <= finalB[4].DB_MAX_OUTPUT_PORT_TYPE
-b[5] <= finalB[5].DB_MAX_OUTPUT_PORT_TYPE
-b[6] <= finalB[6].DB_MAX_OUTPUT_PORT_TYPE
-b[7] <= finalB[7].DB_MAX_OUTPUT_PORT_TYPE
-b[8] <= finalB[8].DB_MAX_OUTPUT_PORT_TYPE
-b[9] <= finalB[9].DB_MAX_OUTPUT_PORT_TYPE
-b[10] <= finalB[10].DB_MAX_OUTPUT_PORT_TYPE
-b[11] <= finalB[11].DB_MAX_OUTPUT_PORT_TYPE
-b[12] <= finalB[12].DB_MAX_OUTPUT_PORT_TYPE
-b[13] <= finalB[13].DB_MAX_OUTPUT_PORT_TYPE
-b[14] <= finalB[14].DB_MAX_OUTPUT_PORT_TYPE
-b[15] <= finalB[15].DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= registers.PORTBDATAOUT
+b[1] <= registers.PORTBDATAOUT1
+b[2] <= registers.PORTBDATAOUT2
+b[3] <= registers.PORTBDATAOUT3
+b[4] <= registers.PORTBDATAOUT4
+b[5] <= registers.PORTBDATAOUT5
+b[6] <= registers.PORTBDATAOUT6
+b[7] <= registers.PORTBDATAOUT7
+b[8] <= registers.PORTBDATAOUT8
+b[9] <= registers.PORTBDATAOUT9
+b[10] <= registers.PORTBDATAOUT10
+b[11] <= registers.PORTBDATAOUT11
+b[12] <= registers.PORTBDATAOUT12
+b[13] <= registers.PORTBDATAOUT13
+b[14] <= registers.PORTBDATAOUT14
+b[15] <= registers.PORTBDATAOUT15
 
 
 |tp1|alu:aluExecute

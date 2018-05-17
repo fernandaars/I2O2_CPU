@@ -1,8 +1,7 @@
 // .: Register File Module :.
 
 module registerFile (
-    input clk0,
-	 input clk1,
+    input clk,
 	 input RWsignal,
 	 input [3:0] codop,
     input [3:0] addrARead,
@@ -12,22 +11,12 @@ module registerFile (
     output [15:0] a,
     output [15:0] b
 );
-	 reg [15:0] finalB; 
-    reg [15:0] registers[15:0];
+   reg [15:0] registers[15:0];
 	 
-	 assign a = registers[addrARead];
-	 
-	always @(posedge clk0) begin
-		if(codop >= 4'd6 || codop == 4'd2) begin
-			finalB = addrBRead;
-		end
-		else begin 
-			finalB = registers[addrBRead];
-		end
-	end
-	assign b = finalB;
+	assign a = registers[addrARead];
+	assign b = registers[addrBRead];
 	
-	always @(posedge clk1) begin
+	always @(posedge clk) begin
 	  if (RWsignal) begin
 			registers[addrCWrite] = data;
 	  end
