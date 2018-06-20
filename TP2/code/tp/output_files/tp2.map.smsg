@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at pipeline.v(87): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at pipeline.v(123): always construct contains both blocking and non-blocking assignments
