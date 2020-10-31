@@ -1,10 +1,5 @@
 # Organização de Computadores II [2018/1]
 
-* Breno Augusto Martins | @brenoam |  brenoam@dcc.ufmg.br, brenoaugmartins@gmail.com
-* Evandro Lucas Figueiredo Teixeira | @EvandroLucas | lucasfigteixeira@dcc.ufmg.br lucasfigteixeira@gmail.com
-* Fernanda Aparecida Rodrigues Silva | @fernandaars | fernandaars@dcc.ufmg.br, fernandaaprsilva@gmail.com
-* Rafael Augusto Botelho Perez | @r-perez | rafael.perez@dcc.ufmg.br, rafaelperez1279@gmail.com
-
 ## Trabalhos
 
 * Trabalho Prático 1 | Data de Entrega:10/05 | [Especificação](https://github.com/fernandaars/UFMG-5-OC2/blob/master/TP1/tp1_spec.pdf)
@@ -36,17 +31,3 @@
 * Prova 2 | Data:15/05
 * Prova 3 | Data:26/06
 
-## Monitoriais
-### Horários
-
-* Segundas-Feiras, das 10:00 às 12:00 e das 14:00 às 16:00;
-* Quartas-Feiras, das 14:00 às 16:00;
-
-### Sala
-
-* 2310
-
-### Contato dos Monitores
-
-* Luis Eduardo Pedraza Caballero | lpedrazac1@gmail.com
-* Laysson Oliveira Luz | layssonoliveir4@gmail.com
